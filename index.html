@@ -28,7 +28,7 @@
     "alternateName":["PJ Matlock","Perry Matlock"],
     "url":"https://pjmatlock.com/",
     "sameAs":[
-      "https://twitter.com/pj_matlock",
+      "https://x.com/pj_matlock",
       "https://www.instagram.com/pjmatlock/",
       "https://discord.gg/atlastrading"
     ],
@@ -94,17 +94,23 @@
     header{padding:34px 28px 18px; border-bottom:1px solid var(--line)}
     .badge{
       display:inline-block; font-weight:900; letter-spacing:.02em;
-      font-size:1.65rem; padding:14px 18px; border-radius:14px; color:#dbeafe;
+      font-size:1.75rem; padding:14px 18px; border-radius:14px; color:#dbeafe;
       background:linear-gradient(135deg, #60a5fa, #7dd3fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
       border:1px solid #263244;
     }
     .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:14px}
     .btn{
       appearance:none; border:none; cursor:pointer; text-decoration:none; font-weight:700;
-      padding:10px 16px; border-radius:12px; transition:transform .12s ease, background .12s ease;
-      background:#0d1424; color:#e2e8f0; border:1px solid #243041
+      padding:10px 14px; border-radius:12px; transition:transform .12s ease, background .12s ease;
+      background:#0d1424; color:#e2e8f0; border:1px solid #243041;
+      display:inline-flex; align-items:center; gap:10px;
     }
     .btn:hover{background:#111a2e; transform:translateY(-1px)}
+    .btn .ico{
+      width:18px; height:18px; display:inline-block; border-radius:4px; overflow:hidden;
+    }
+    .btn .ico img{width:100%; height:100%}
+
     section{padding:22px 28px}
     h1{font-size:1.5rem; margin:0 0 6px}
     .meta{color:var(--muted); margin-bottom:12px}
@@ -121,8 +127,8 @@
       transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
     }
     .cardlink:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    .cardlink .ico{flex:0 0 28px;height:28px;border-radius:6px;overflow:hidden;background:#0f172a;display:grid;place-items:center}
-    .cardlink .ico img{width:20px;height:20px}
+    .cardlink .ico-fav{flex:0 0 28px;height:28px;border-radius:6px;overflow:hidden;background:#0f172a;display:grid;place-items:center}
+    .cardlink .ico-fav img{width:20px;height:20px}
     .cardlink h3{margin:0 0 4px;font-size:1rem;line-height:1.3}
     .cardlink .metatext{margin:0;color:#94a3b8;font-size:.9rem}
     .cardlink .domain{font-weight:600;color:#cbd5e1;font-size:.9rem}
@@ -136,9 +142,24 @@
       <header>
         <span class="badge">PJ Matlock — Official</span>
         <div class="cta">
-          <a class="btn" href="https://discord.gg/atlastrading" target="_blank" rel="noopener">Join the Atlas Discord</a>
-          <a class="btn" href="https://twitter.com/pj_matlock" target="_blank" rel="noopener">X (Twitter)</a>
-          <a class="btn" href="https://www.instagram.com/pjmatlock/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn" href="https://discord.gg/atlastrading" target="_blank" rel="noopener" aria-label="Join the Atlas Discord">
+            <span class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" alt="">
+            </span>
+            Join the Atlas Discord
+          </a>
+          <a class="btn" href="https://x.com/pj_matlock" target="_blank" rel="me noopener" aria-label="Follow on X">
+            <span class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=x.com" alt="">
+            </span>
+            X
+          </a>
+          <a class="btn" href="https://www.instagram.com/pjmatlock/" target="_blank" rel="me noopener" aria-label="Follow on Instagram">
+            <span class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=instagram.com" alt="">
+            </span>
+            Instagram
+          </a>
         </div>
       </header>
 
@@ -153,7 +174,7 @@
 
           <!-- VARIETY -->
           <a class="cardlink" href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" rel="noopener">
-            <div class="ico">
+            <div class="ico-fav">
               <img src="https://www.google.com/s2/favicons?sz=64&domain=variety.com" alt="Variety favicon">
             </div>
             <div>
@@ -165,7 +186,7 @@
 
           <!-- LAW360: Case tossed ahead of trial (PDF) -->
           <a class="cardlink" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" rel="noopener">
-            <div class="ico">
+            <div class="ico-fav">
               <img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360 favicon">
             </div>
             <div>
@@ -177,7 +198,7 @@
 
           <!-- LAW360: Judge won’t pause dismissal (PDF) -->
           <a class="cardlink" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/Judge-Wont-Pause-Dismissal-Of-114M-Discord-Stock-Case-Law360.pdf" rel="noopener">
-            <div class="ico">
+            <div class="ico-fav">
               <img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360 favicon">
             </div>
             <div>
@@ -189,7 +210,7 @@
 
           <!-- DYNAMIS LLP -->
           <a class="cardlink" href="https://www.dynamisllp.com/media/114m-discord-case-tossed" rel="noopener">
-            <div class="ico">
+            <div class="ico-fav">
               <img src="https://www.google.com/s2/favicons?sz=64&domain=dynamisllp.com" alt="Dynamis favicon">
             </div>
             <div>
