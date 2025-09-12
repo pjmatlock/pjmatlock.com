@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <title>PJ Matlock — Official Site (Case Dismissed)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official website of PJ Matlock. On March 20, 2024, the court dismissed all criminal charges. Sources below." />
+  <meta name="description" content="Official website of PJ Matlock. On March 20, 2024, the federal court dismissed all criminal charges. Sources and answers to common questions." />
   <link rel="canonical" href="https://pjmatlock.com/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph -->
   <meta property="og:title" content="PJ Matlock — Case Dismissed (Mar 20, 2024)" />
-  <meta property="og:description" content="On March 20, 2024, the court dismissed all criminal charges. Sources inside." />
+  <meta property="og:description" content="On March 20, 2024, the court dismissed all criminal charges. Sources and answers inside." />
   <meta property="og:url" content="https://pjmatlock.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PJ Matlock Official" />
@@ -19,7 +19,7 @@
   <meta name="twitter:site" content="@pj_matlock" />
   <meta name="twitter:creator" content="@pj_matlock" />
 
-  <!-- Person schema -->
+  <!-- Person -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -30,13 +30,14 @@
     "sameAs":[
       "https://x.com/pj_matlock",
       "https://www.instagram.com/pjmatlock/",
-      "https://discord.gg/atlastrading"
+      "https://discord.gg/atlastrading",
+      "https://pjmatlock.com/"
     ],
     "description":"Entrepreneur and investor."
   }
   </script>
 
-  <!-- Article + ClaimReview schemas on homepage -->
+  <!-- NewsArticle (dismissal) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -57,6 +58,8 @@
     ]
   }
   </script>
+
+  <!-- ClaimReview (myth-buster) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -70,60 +73,63 @@
   }
   </script>
 
+  <!-- FAQPage (targets common searches) -->
+  <script type="application/ld+json">
+  {
+   "@context":"https://schema.org",
+   "@type":"FAQPage",
+   "mainEntity":[
+    {"@type":"Question","name":"Was PJ Matlock charged?","acceptedAnswer":{"@type":"Answer","text":"Yes in 2022, but on March 20, 2024 the U.S. District Court for the Southern District of Texas dismissed all criminal charges. See sources on this page."}},
+    {"@type":"Question","name":"What is the current status of PJ Matlock’s case?","acceptedAnswer":{"@type":"Answer","text":"The government filed a notice of appeal to the Fifth Circuit. A related SEC civil matter has been stayed pending the appeal."}},
+    {"@type":"Question","name":"Is PJ Matlock a musician?","acceptedAnswer":{"@type":"Answer","text":"No. Some third-party pages were auto-generated/unauthorized. Official info is maintained here."}},
+    {"@type":"Question","name":"PJ Matlock net worth","acceptedAnswer":{"@type":"Answer","text":"Not disclosed. Any numbers found online are speculation and not provided by PJ Matlock."}},
+    {"@type":"Question","name":"What does PJ Matlock trade?","acceptedAnswer":{"@type":"Answer","text":"Primarily U.S. equities and options; day-trading focused. None of this site is financial advice."}},
+    {"@type":"Question","name":"Who is PJ Matlock’s wife?","acceptedAnswer":{"@type":"Answer","text":"PJ is married to Courtenay Stroud."}},
+    {"@type":"Question","name":"Where does PJ Matlock live?","acceptedAnswer":{"@type":"Answer","text":"The Woodlands, Texas area. No personal address is published for privacy."}},
+    {"@type":"Question","name":"What car does PJ Matlock drive?","acceptedAnswer":{"@type":"Answer","text":"Notable car: a 2022 McLaren 765LT Spyder."}},
+    {"@type":"Question","name":"Was PJ Matlock involved in a pump-and-dump?","acceptedAnswer":{"@type":"Answer","text":"Allegations were made in 2022; the federal court dismissed the criminal case on March 20, 2024. See the sources listed on this page."}},
+    {"@type":"Question","name":"Did a judge find no wrongdoing?","acceptedAnswer":{"@type":"Answer","text":"The indictment was dismissed before trial; it was not a factual finding after a jury verdict. The dismissal is the current operative status."}},
+    {"@type":"Question","name":"What is Atlas?","acceptedAnswer":{"@type":"Answer","text":"Atlas is PJ Matlock’s community and Discord server for markets discussion. Invite link: https://discord.gg/atlastrading"}},
+    {"@type":"Question","name":"Who else was named in the 2022 case?","acceptedAnswer":{"@type":"Answer","text":"Public filings list several co-defendants, including Edward Constantin (known as “Zack Morris”). The district court dismissed the criminal indictment in the consolidated case; the government appealed."}}
+   ]
+  }
+  </script>
+
   <style>
-    :root{
-      --fg:#e5e7eb; --muted:#94a3b8; --line:#223047;
-      --shadow:0 20px 50px rgba(0,0,0,.45);
-    }
+    :root{--fg:#e5e7eb;--muted:#94a3b8;--line:#223047;--shadow:0 20px 50px rgba(0,0,0,.45)}
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; color:var(--fg);
+      margin:0;color:var(--fg);
       background: radial-gradient(1200px 700px at 10% 10%, #1e293b 0%, #0b1020 55%, #05070c 100%),
                   radial-gradient(800px 400px at 90% -10%, rgba(52,211,153,.18), transparent 60%),
                   radial-gradient(900px 500px at -10% 110%, rgba(96,165,250,.18), transparent 60%);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.6;
     }
-    .grid{min-height:100%; display:grid; place-items:center; padding:48px 20px}
-    .card{
-      width:min(960px,100%); border:1px solid var(--line); border-radius:24px;
-      background:linear-gradient(180deg, rgba(14,20,33,.7), rgba(9,14,24,.72));
-      box-shadow:var(--shadow); overflow:hidden;
-    }
+    .grid{min-height:100%;display:grid;place-items:center;padding:48px 20px}
+    .card{width:min(960px,100%);border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,rgba(14,20,33,.7),rgba(9,14,24,.72));box-shadow:var(--shadow);overflow:hidden}
 
-    /* Header — sleeker brand & right-aligned links */
-    .hdr{display:flex; align-items:center; justify-content:space-between; gap:12px;
-         padding:20px 24px; border-bottom:1px solid var(--line)}
-    .brand{
-      font-weight:800; letter-spacing:.015em; font-size:1.35rem; color:#e6eefc;
-    }
-    .cta{display:flex; flex-wrap:wrap; gap:10px}
-    .btn{
-      appearance:none; border:none; cursor:pointer; text-decoration:none; font-weight:700;
-      padding:8px 12px; border-radius:12px; transition:transform .12s ease, background .12s ease;
-      background:#0d1424; color:#e2e8f0; border:1px solid #243041;
-      display:inline-flex; align-items:center; gap:10px;
-    }
-    .btn:hover{background:#111a2e; transform:translateY(-1px)}
-    .avatar{width:22px; height:22px; border-radius:50%; overflow:hidden; flex:0 0 22px; background:#0f172a}
-    .avatar img{width:100%; height:100%; display:block}
+    /* Header */
+    .hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:.015em;font-size:1.35rem;color:#e6eefc}
+    .cta{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{appearance:none;border:none;cursor:pointer;text-decoration:none;font-weight:700;padding:8px 12px;border-radius:12px;transition:transform .12s ease,background .12s ease;background:#0d1424;color:#e2e8f0;border:1px solid #243041;display:inline-flex;align-items:center;gap:10px}
+    .btn:hover{background:#111a2e;transform:translateY(-1px)}
+    .avatar{width:22px;height:22px;border-radius:50%;overflow:hidden;flex:0 0 22px;background:#0f172a}
+    .avatar img{width:100%;height:100%;display:block}
 
     section{padding:22px 28px}
-    h1{font-size:1.5rem; margin:0 0 6px}
-    .meta{color:var(--muted); margin-bottom:12px}
-    h2{font-size:1.2rem; margin:18px 0 8px}
-    a{color:#93c5fd; text-decoration:none}
+    h1{font-size:1.5rem;margin:0 0 6px}
+    .meta{color:var(--muted);margin-bottom:12px}
+    h2{font-size:1.2rem;margin:18px 0 8px}
+    a{color:#93c5fd;text-decoration:none}
     a:hover{text-decoration:underline}
 
-    /* Link preview cards */
+    /* Source cards */
     .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
     @media (max-width:820px){.cards{grid-template-columns:1fr}}
-    .cardlink{
-      display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:#e5e7eb;
-      border:1px solid #223047;border-radius:14px;padding:14px;background:linear-gradient(180deg,rgba(12,18,32,.6),rgba(9,14,24,.55));
-      transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
-    }
+    .cardlink{display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:#e5e7eb;border:1px solid #223047;border-radius:14px;padding:14px;background:linear-gradient(180deg,rgba(12,18,32,.6),rgba(9,14,24,.55));transition:transform .12s ease,box-shadow .12s ease,background .12s ease}
     .cardlink:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
     .ico-fav{flex:0 0 28px;height:28px;border-radius:6px;overflow:hidden;background:#0f172a;display:grid;place-items:center}
     .ico-fav img{width:20px;height:20px}
@@ -131,8 +137,13 @@
     .cardlink .metatext{margin:0;color:#94a3b8;font-size:.9rem}
     .cardlink .domain{font-weight:600;color:#cbd5e1;font-size:.9rem}
 
-    /* Footer — right aligned */
-    footer{padding:16px 24px 22px; color:var(--muted); border-top:1px solid var(--line); text-align:right}
+    /* Answers list (FAQ) */
+    .answers{margin-top:8px}
+    .answers ul{padding-left:1.2rem;margin:0}
+    .answers li{margin:.5rem 0}
+
+    /* Footer */
+    footer{padding:16px 24px 22px;color:var(--muted);border-top:1px solid var(--line);text-align:right}
   </style>
 </head>
 <body>
@@ -143,30 +154,18 @@
         <div class="brand">PJ Matlock — Official</div>
         <nav class="cta">
           <a class="btn" href="https://discord.gg/atlastrading" target="_blank" rel="noopener" aria-label="Join the Atlas Discord">
-            <span class="avatar">
-              <img src="/assets/discord-avatar.jpg"
-                   onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=discord.com';" alt="">
-            </span>
-            Discord
+            <span class="avatar"><img src="/assets/discord-avatar.jpg" onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=discord.com';" alt=""></span>Discord
           </a>
           <a class="btn" href="https://x.com/pj_matlock" target="_blank" rel="me noopener" aria-label="Follow on X">
-            <span class="avatar">
-              <img src="/assets/x-avatar.jpg"
-                   onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=x.com';" alt="">
-            </span>
-            X
+            <span class="avatar"><img src="/assets/x-avatar.jpg" onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=x.com';" alt=""></span>X
           </a>
           <a class="btn" href="https://www.instagram.com/pjmatlock/" target="_blank" rel="me noopener" aria-label="Follow on Instagram">
-            <span class="avatar">
-              <img src="/assets/instagram-avatar.jpg"
-                   onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=instagram.com';" alt="">
-            </span>
-            Instagram
+            <span class="avatar"><img src="/assets/instagram-avatar.jpg" onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=instagram.com';" alt=""></span>Instagram
           </a>
         </nav>
       </header>
 
-      <!-- CASE STATUS on the homepage -->
+      <!-- Case status + sources -->
       <section>
         <h1>Case Status: All Criminal Charges Dismissed (March 20, 2024)</h1>
         <div class="meta">United States v. Constantinescu et al., S.D. Tex. — Judge Andrew S. Hanen</div>
@@ -174,61 +173,48 @@
 
         <h2>Sources</h2>
         <div class="cards">
-
-          <!-- VARIETY -->
           <a class="cardlink" href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" rel="noopener">
-            <div class="ico-fav">
-              <img src="https://www.google.com/s2/favicons?sz=64&domain=variety.com" alt="Variety favicon">
-            </div>
-            <div>
-              <h3>Variety: Securities fraud charges dropped</h3>
-              <p class="metatext">Industry coverage noting the March 20, 2024 dismissal.</p>
-              <div class="domain">variety.com</div>
-            </div>
+            <div class="ico-fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=variety.com" alt="Variety"></div>
+            <div><h3>Variety: Securities fraud charges dropped</h3><p class="metatext">Industry coverage noting the March 20, 2024 dismissal.</p><div class="domain">variety.com</div></div>
           </a>
 
-          <!-- LAW360: Case tossed ahead of trial (PDF) -->
           <a class="cardlink" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" rel="noopener">
-            <div class="ico-fav">
-              <img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360 favicon">
-            </div>
-            <div>
-              <h3>Law360 (PDF): Case tossed ahead of trial</h3>
-              <p class="metatext">Report that the district court dismissed the indictment.</p>
-              <div class="domain">law360.com (PDF)</div>
-            </div>
+            <div class="ico-fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360"></div>
+            <div><h3>Law360 (PDF): Case tossed ahead of trial</h3><p class="metatext">Report that the district court dismissed the indictment.</p><div class="domain">law360.com (PDF)</div></div>
           </a>
 
-          <!-- LAW360: Judge won’t pause dismissal (PDF) -->
           <a class="cardlink" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/Judge-Wont-Pause-Dismissal-Of-114M-Discord-Stock-Case-Law360.pdf" rel="noopener">
-            <div class="ico-fav">
-              <img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360 favicon">
-            </div>
-            <div>
-              <h3>Law360 (PDF): Judge won’t pause dismissal</h3>
-              <p class="metatext">Follow-up coverage of post-dismissal motion practice.</p>
-              <div class="domain">law360.com (PDF)</div>
-            </div>
+            <div class="ico-fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360"></div>
+            <div><h3>Law360 (PDF): Judge won’t pause dismissal</h3><p class="metatext">Follow-up coverage of post-dismissal motion practice.</p><div class="domain">law360.com (PDF)</div></div>
           </a>
 
-          <!-- DYNAMIS LLP -->
           <a class="cardlink" href="https://www.dynamisllp.com/media/114m-discord-case-tossed" rel="noopener">
-            <div class="ico-fav">
-              <img src="https://www.google.com/s2/favicons?sz=64&domain=dynamisllp.com" alt="Dynamis favicon">
-            </div>
-            <div>
-              <h3>Dynamis LLP: Dismissal summary</h3>
-              <p class="metatext">Short legal summary of the dismissal.</p>
-              <div class="domain">dynamisllp.com</div>
-            </div>
+            <div class="ico-fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=dynamisllp.com" alt="Dynamis"></div>
+            <div><h3>Dynamis LLP: Dismissal summary</h3><p class="metatext">Short legal summary of the dismissal.</p><div class="domain">dynamisllp.com</div></div>
           </a>
-
         </div>
       </section>
 
-      <footer>
-        © <span id="y"></span> PJ Matlock
-      </footer>
+      <!-- Answers (targets common searches) -->
+      <section class="answers">
+        <h2>Answers</h2>
+        <ul>
+          <li><strong>Was PJ Matlock charged?</strong> Yes in 2022; on <b>March 20, 2024</b> the federal court <b>dismissed all criminal charges</b>. See sources above.</li>
+          <li><strong>Current status?</strong> The government appealed to the Fifth Circuit. The related SEC civil matter is stayed pending the appeal.</li>
+          <li><strong>Is PJ Matlock a musician?</strong> No—old auto-generated listings were not authorized.</li>
+          <li><strong>PJ Matlock net worth?</strong> Not disclosed; any online figures are speculation.</li>
+          <li><strong>PJ Matlock trading?</strong> U.S. equities/options; day-trading focused. This site is not financial advice.</li>
+          <li><strong>PJ Matlock wife?</strong> Courtenay Stroud.</li>
+          <li><strong>PJ Matlock car / McLaren?</strong> 2022 McLaren 765LT Spyder.</li>
+          <li><strong>PJ Matlock house?</strong> Lives in the The Woodlands, Texas area; no address is published.</li>
+          <li><strong>PJ Matlock securities fraud / pump and dump?</strong> Allegations from 2022; the criminal case was dismissed on March 20, 2024.</li>
+          <li><strong>Did the judge find no wrongdoing?</strong> The case was dismissed pre-trial; that is different from a post-trial factual finding.</li>
+          <li><strong>Atlas Discord?</strong> Join at <a href="https://discord.gg/atlastrading" rel="noopener">discord.gg/atlastrading</a>.</li>
+          <li><strong>Other names in the 2022 case?</strong> Public filings list co-defendants including Edward Constantin (“Zack Morris”). The district court dismissed the indictment in the consolidated case; the government appealed.</li>
+        </ul>
+      </section>
+
+      <footer>© <span id="y"></span> PJ Matlock</footer>
     </div>
   </div>
   <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
