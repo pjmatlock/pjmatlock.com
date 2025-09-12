@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>PJ Matlock — Official Site</title>
+  <title>PJ Matlock — Official Site (Case Status: All Criminal Charges Dismissed)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official website of PJ Matlock — entrepreneur, investor, and public figure. Case status, updates, and socials." />
+  <meta name="description" content="Official website of PJ Matlock. On March 20, 2024, the court dismissed all criminal charges; the government appealed to the Fifth Circuit. Sources and documents below." />
   <link rel="canonical" href="https://pjmatlock.com/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="PJ Matlock — Official Site" />
-  <meta property="og:description" content="Case status, updates, and official links." />
+  <meta property="og:title" content="PJ Matlock — Case Dismissed (Mar 20, 2024)" />
+  <meta property="og:description" content="Court dismissed all criminal charges on March 20, 2024; government appealed. Sources inside." />
   <meta property="og:url" content="https://pjmatlock.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PJ Matlock Official" />
@@ -22,66 +22,98 @@
   <!-- Person schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Perry \"PJ\" Matlock",
-    "alternateName": ["PJ Matlock","Perry Matlock"],
-    "url": "https://pjmatlock.com/",
-    "sameAs": [
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Perry \"PJ\" Matlock",
+    "alternateName":["PJ Matlock","Perry Matlock"],
+    "url":"https://pjmatlock.com/",
+    "sameAs":[
       "https://twitter.com/pj_matlock",
       "https://www.instagram.com/pjmatlock/",
-      "https://pjmatlock.com/case-status/"
+      "https://discord.gg/atlastrading"
     ],
-    "description": "Entrepreneur and investor."
+    "description":"Entrepreneur and investor."
+  }
+  </script>
+
+  <!-- Article + ClaimReview schemas right on the homepage for machines -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"NewsArticle",
+    "headline":"All Criminal Charges Dismissed — Case Status and Sources",
+    "datePublished":"2024-03-20",
+    "dateModified":"2024-03-20",
+    "author":{"@type":"Person","name":"Perry \"PJ\" Matlock"},
+    "publisher":{"@type":"Organization","name":"PJ Matlock Official"},
+    "url":"https://pjmatlock.com/",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://pjmatlock.com/"},
+    "articleBody":"On March 20, 2024, Judge Andrew S. Hanen of the Southern District of Texas dismissed all criminal charges in United States v. Constantinescu et al. The government filed a notice of appeal to the U.S. Court of Appeals for the Fifth Circuit. Related SEC civil proceedings have been stayed pending the appeal.",
+    "citation":[
+      "https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/",
+      "https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf",
+      "https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/Judge-Wont-Pause-Dismissal-Of-114M-Discord-Stock-Case-Law360.pdf",
+      "https://www.dynamisllp.com/media/114m-discord-case-tossed"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ClaimReview",
+    "url":"https://pjmatlock.com/",
+    "claimReviewed":"PJ Matlock currently faces active criminal charges from the 2022 case.",
+    "reviewBody":"On March 20, 2024, the district court dismissed the indictment; the government appealed to the Fifth Circuit.",
+    "datePublished":"2024-03-22",
+    "author":{"@type":"Organization","name":"PJ Matlock Official"},
+    "reviewRating":{"@type":"Rating","ratingValue":"1","bestRating":"5","worstRating":"1","alternateName":"False"}
   }
   </script>
 
   <style>
     :root{
-      --bg1:#0f172a; --bg2:#111827; --accent:#60a5fa; --accent2:#34d399; --fg:#e5e7eb; --muted:#94a3b8;
-      --card:#0b1220aa; --cardBorder:#1f2937; --shadow:0 20px 50px rgba(0,0,0,.4);
+      --fg:#e5e7eb; --muted:#94a3b8; --line:#223047;
+      --card:#0b1220aa; --shadow:0 20px 50px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; color:var(--fg); background: radial-gradient(1200px 700px at 10% 10%, #1e293b 0%, #0b1020 55%, #05070c 100%);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      margin:0; color:var(--fg);
+      background: radial-gradient(1200px 700px at 10% 10%, #1e293b 0%, #0b1020 55%, #05070c 100%),
+                  radial-gradient(800px 400px at 90% -10%, rgba(52,211,153,.18), transparent 60%),
+                  radial-gradient(900px 500px at -10% 110%, rgba(96,165,250,.18), transparent 60%);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.6;
     }
-    .grid{
-      min-height:100%; display:grid; place-items:center; padding:48px 20px;
-      background:
-        radial-gradient(800px 400px at 90% -10%, rgba(52, 211, 153, .25), transparent 60%),
-        radial-gradient(900px 500px at -10% 110%, rgba(96, 165, 250, .22), transparent 60%);
-    }
+    .grid{min-height:100%; display:grid; place-items:center; padding:48px 20px}
     .card{
-      width:min(920px, 100%); border:1px solid var(--cardBorder); border-radius:24px;
-      background:linear-gradient(180deg, rgba(14,20,33,.7), rgba(9,14,24,.7));
+      width:min(960px,100%); border:1px solid var(--line); border-radius:24px;
+      background:linear-gradient(180deg, rgba(14,20,33,.7), rgba(9,14,24,.72));
       box-shadow:var(--shadow); overflow:hidden;
     }
-    header{padding:36px 28px 0}
-    .badge{display:inline-block; font-size:.82rem; letter-spacing:.04em; color:var(--muted); border:1px solid #263244; border-radius:999px; padding:6px 12px}
-    .hero{padding:18px 28px 28px}
-    h1{font-size:3rem; line-height:1.1; margin:8px 0 10px}
-    p.lead{font-size:1.125rem; color:#cbd5e1; margin:0}
-    .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
+    header{padding:34px 28px 18px; border-bottom:1px solid var(--line)}
+    .badge{
+      display:inline-block; font-weight:800; letter-spacing:.02em;
+      font-size:1.25rem; padding:10px 16px; border-radius:14px; color:#dbeafe;
+      background:linear-gradient(135deg, #60a5fa, #7dd3fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      border:1px solid #263244;
+    }
+    .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:14px}
     .btn{
-      appearance:none; border:none; cursor:pointer; text-decoration:none; font-weight:700; letter-spacing:.02em;
-      padding:12px 18px; border-radius:12px; transition:transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+      appearance:none; border:none; cursor:pointer; text-decoration:none; font-weight:700;
+      padding:10px 16px; border-radius:12px; transition:transform .12s ease, background .12s ease;
+      background:#0d1424; color:#e2e8f0; border:1px solid #243041
     }
-    .btn.primary{background:linear-gradient(135deg, var(--accent), #7dd3fc); color:#0b1220}
-    .btn.primary:hover{transform:translateY(-1px)}
-    .btn.ghost{background:#0d1424; color:#e2e8f0; border:1px solid #243041}
-    .btn.ghost:hover{background:#111a2e}
-    .row{display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:0 28px 32px}
-    .panel{
-      border:1px solid #223047; border-radius:18px; padding:18px 18px 16px; background:linear-gradient(180deg, rgba(10,16,28,.6), rgba(9,14,24,.55));
-    }
-    .panel h3{margin:0 0 6px; font-size:1.05rem; color:#cbd5e1}
-    .list{margin:6px 0 0; padding:0 0 0 16px; color:#a8b3c7}
-    footer{padding:18px 28px 28px; color:var(--muted); border-top:1px solid #223047; background:linear-gradient(180deg, rgba(9,14,24,.55), rgba(8,12,20,.65))}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
-    @media (max-width:800px){.row{grid-template-columns:1fr} h1{font-size:2.3rem}}
+    .btn:hover{background:#111a2e; transform:translateY(-1px)}
+    section{padding:22px 28px}
+    h1{font-size:1.5rem; margin:0 0 6px}
+    .meta{color:var(--muted); margin-bottom:12px}
+    h2{font-size:1.2rem; margin:18px 0 8px}
+    ul.links{padding-left:1.2rem; margin:0}
+    ul.links li{margin:.55rem 0}
+    a{color:#93c5fd; text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{padding:18px 28px 28px; color:var(--muted); border-top:1px solid var(--line)}
   </style>
 </head>
 <body>
@@ -89,38 +121,35 @@
     <div class="card">
       <header>
         <span class="badge">PJ Matlock — Official</span>
-      </header>
-      <section class="hero">
-        <h1>Entrepreneur • Investor • Builder</h1>
-        <p class="lead">I solve hard problems, build communities, and keep receipts. If you’ve seen outdated headlines, here’s the current record.</p>
         <div class="cta">
-          <a class="btn primary" href="/case-status/">View Case Status</a>
-          <a class="btn ghost" href="https://twitter.com/pj_matlock" target="_blank" rel="noopener">X (Twitter)</a>
-          <a class="btn ghost" href="https://www.instagram.com/pjmatlock/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn" href="https://discord.gg/atlastrading" target="_blank" rel="noopener">Join the Atlas Discord</a>
+          <a class="btn" href="https://twitter.com/pj_matlock" target="_blank" rel="noopener">X (Twitter)</a>
+          <a class="btn" href="https://www.instagram.com/pjmatlock/" target="_blank" rel="noopener">Instagram</a>
         </div>
-      </section>
+      </header>
 
-      <section class="row">
-        <div class="panel">
-          <h3>What’s on this site</h3>
-          <ul class="list">
-            <li><strong>Case Status:</strong> a clean, source-linked summary.</li>
-            <li><strong>Official links:</strong> socials and press contact.</li>
-            <li><span class="mono">robots.txt</span> &amp; <span class="mono">sitemap.xml</span> for fast indexing.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Press / Media</h3>
-          <ul class="list">
-            <li>Email: <a href="mailto:press@pjmatlock.com">press@pjmatlock.com</a></li>
-            <li>Preferred citation: “PJ Matlock — Case Status”</li>
-            <li>Please link to <a href="/case-status/">pjmatlock.com/case-status</a></li>
-          </ul>
-        </div>
+      <!-- CASE STATUS lives on the homepage -->
+      <section>
+        <h1>Case Status: All Criminal Charges Dismissed (March 20, 2024)</h1>
+        <div class="meta">United States v. Constantinescu et al., S.D. Tex. — Judge Andrew S. Hanen</div>
+        <p>
+          On <strong>March 20, 2024</strong>, the U.S. District Court for the Southern District of Texas
+          <strong>dismissed all criminal charges</strong> in the matter referenced above. The government has
+          <strong>appealed to the U.S. Court of Appeals for the Fifth Circuit</strong>. A related SEC civil action has
+          been stayed pending the appeal.
+        </p>
+
+        <h2>Coverage &amp; Documents</h2>
+        <ul class="links">
+          <li><a href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" rel="noopener">Variety: Securities fraud charges dropped</a></li>
+          <li><a href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" rel="noopener">Law360 (PDF): Case tossed ahead of trial</a></li>
+          <li><a href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/Judge-Wont-Pause-Dismissal-Of-114M-Discord-Stock-Case-Law360.pdf" rel="noopener">Law360 (PDF): Judge won’t pause dismissal</a></li>
+          <li><a href="https://www.dynamisllp.com/media/114m-discord-case-tossed" rel="noopener">Dynamis LLP: Dismissal summary</a></li>
+        </ul>
       </section>
 
       <footer>
-        © <span id="y"></span> PJ Matlock · All rights reserved.
+        © <span id="y"></span> PJ Matlock
       </footer>
     </div>
   </div>
