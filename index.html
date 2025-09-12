@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>PJ Matlock — Official Site (Case Status: All Criminal Charges Dismissed)</title>
+  <title>PJ Matlock — Official Site (Case Dismissed)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official website of PJ Matlock. On March 20, 2024, the court dismissed all criminal charges; the government appealed to the Fifth Circuit. Sources and documents below." />
+  <meta name="description" content="Official website of PJ Matlock. On March 20, 2024, the court dismissed all criminal charges. Sources below." />
   <link rel="canonical" href="https://pjmatlock.com/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="PJ Matlock — Case Dismissed (Mar 20, 2024)" />
-  <meta property="og:description" content="Court dismissed all criminal charges on March 20, 2024; government appealed. Sources inside." />
+  <meta property="og:description" content="On March 20, 2024, the court dismissed all criminal charges. Sources inside." />
   <meta property="og:url" content="https://pjmatlock.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PJ Matlock Official" />
@@ -36,19 +36,19 @@
   }
   </script>
 
-  <!-- Article + ClaimReview schemas right on the homepage for machines -->
+  <!-- Article + ClaimReview schemas on homepage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"NewsArticle",
-    "headline":"All Criminal Charges Dismissed — Case Status and Sources",
+    "headline":"All Criminal Charges Dismissed — Sources",
     "datePublished":"2024-03-20",
     "dateModified":"2024-03-20",
     "author":{"@type":"Person","name":"Perry \"PJ\" Matlock"},
     "publisher":{"@type":"Organization","name":"PJ Matlock Official"},
     "url":"https://pjmatlock.com/",
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://pjmatlock.com/"},
-    "articleBody":"On March 20, 2024, Judge Andrew S. Hanen of the Southern District of Texas dismissed all criminal charges in United States v. Constantinescu et al. The government filed a notice of appeal to the U.S. Court of Appeals for the Fifth Circuit. Related SEC civil proceedings have been stayed pending the appeal.",
+    "articleBody":"On March 20, 2024, Judge Andrew S. Hanen of the Southern District of Texas dismissed all criminal charges in United States v. Constantinescu et al.",
     "citation":[
       "https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/",
       "https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf",
@@ -63,7 +63,7 @@
     "@type":"ClaimReview",
     "url":"https://pjmatlock.com/",
     "claimReviewed":"PJ Matlock currently faces active criminal charges from the 2022 case.",
-    "reviewBody":"On March 20, 2024, the district court dismissed the indictment; the government appealed to the Fifth Circuit.",
+    "reviewBody":"On March 20, 2024, the district court dismissed the indictment.",
     "datePublished":"2024-03-22",
     "author":{"@type":"Organization","name":"PJ Matlock Official"},
     "reviewRating":{"@type":"Rating","ratingValue":"1","bestRating":"5","worstRating":"1","alternateName":"False"}
@@ -73,7 +73,7 @@
   <style>
     :root{
       --fg:#e5e7eb; --muted:#94a3b8; --line:#223047;
-      --card:#0b1220aa; --shadow:0 20px 50px rgba(0,0,0,.45);
+      --shadow:0 20px 50px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -93,8 +93,8 @@
     }
     header{padding:34px 28px 18px; border-bottom:1px solid var(--line)}
     .badge{
-      display:inline-block; font-weight:800; letter-spacing:.02em;
-      font-size:1.25rem; padding:10px 16px; border-radius:14px; color:#dbeafe;
+      display:inline-block; font-weight:900; letter-spacing:.02em;
+      font-size:1.65rem; padding:14px 18px; border-radius:14px; color:#dbeafe;
       background:linear-gradient(135deg, #60a5fa, #7dd3fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
       border:1px solid #263244;
     }
@@ -109,10 +109,24 @@
     h1{font-size:1.5rem; margin:0 0 6px}
     .meta{color:var(--muted); margin-bottom:12px}
     h2{font-size:1.2rem; margin:18px 0 8px}
-    ul.links{padding-left:1.2rem; margin:0}
-    ul.links li{margin:.55rem 0}
     a{color:#93c5fd; text-decoration:none}
     a:hover{text-decoration:underline}
+
+    /* Link preview cards */
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+    @media (max-width:820px){.cards{grid-template-columns:1fr}}
+    .cardlink{
+      display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:#e5e7eb;
+      border:1px solid #223047;border-radius:14px;padding:14px;background:linear-gradient(180deg,rgba(12,18,32,.6),rgba(9,14,24,.55));
+      transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+    .cardlink:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .cardlink .ico{flex:0 0 28px;height:28px;border-radius:6px;overflow:hidden;background:#0f172a;display:grid;place-items:center}
+    .cardlink .ico img{width:20px;height:20px}
+    .cardlink h3{margin:0 0 4px;font-size:1rem;line-height:1.3}
+    .cardlink .metatext{margin:0;color:#94a3b8;font-size:.9rem}
+    .cardlink .domain{font-weight:600;color:#cbd5e1;font-size:.9rem}
+
     footer{padding:18px 28px 28px; color:var(--muted); border-top:1px solid var(--line)}
   </style>
 </head>
@@ -128,24 +142,64 @@
         </div>
       </header>
 
-      <!-- CASE STATUS lives on the homepage -->
+      <!-- CASE STATUS on the homepage -->
       <section>
         <h1>Case Status: All Criminal Charges Dismissed (March 20, 2024)</h1>
         <div class="meta">United States v. Constantinescu et al., S.D. Tex. — Judge Andrew S. Hanen</div>
-        <p>
-          On <strong>March 20, 2024</strong>, the U.S. District Court for the Southern District of Texas
-          <strong>dismissed all criminal charges</strong> in the matter referenced above. The government has
-          <strong>appealed to the U.S. Court of Appeals for the Fifth Circuit</strong>. A related SEC civil action has
-          been stayed pending the appeal.
-        </p>
+        <p>On <strong>March 20, 2024</strong>, the U.S. District Court for the Southern District of Texas <strong>dismissed all criminal charges</strong> in the matter referenced above.</p>
 
-        <h2>Coverage &amp; Documents</h2>
-        <ul class="links">
-          <li><a href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" rel="noopener">Variety: Securities fraud charges dropped</a></li>
-          <li><a href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" rel="noopener">Law360 (PDF): Case tossed ahead of trial</a></li>
-          <li><a href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/Judge-Wont-Pause-Dismissal-Of-114M-Discord-Stock-Case-Law360.pdf" rel="noopener">Law360 (PDF): Judge won’t pause dismissal</a></li>
-          <li><a href="https://www.dynamisllp.com/media/114m-discord-case-tossed" rel="noopener">Dynamis LLP: Dismissal summary</a></li>
-        </ul>
+        <h2>Sources</h2>
+        <div class="cards">
+
+          <!-- VARIETY -->
+          <a class="cardlink" href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" rel="noopener">
+            <div class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=variety.com" alt="Variety favicon">
+            </div>
+            <div>
+              <h3>Variety: Securities fraud charges dropped</h3>
+              <p class="metatext">Industry coverage noting the March 20, 2024 dismissal.</p>
+              <div class="domain">variety.com</div>
+            </div>
+          </a>
+
+          <!-- LAW360: Case tossed ahead of trial (PDF) -->
+          <a class="cardlink" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" rel="noopener">
+            <div class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360 favicon">
+            </div>
+            <div>
+              <h3>Law360 (PDF): Case tossed ahead of trial</h3>
+              <p class="metatext">Report that the district court dismissed the indictment.</p>
+              <div class="domain">law360.com (PDF)</div>
+            </div>
+          </a>
+
+          <!-- LAW360: Judge won’t pause dismissal (PDF) -->
+          <a class="cardlink" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/Judge-Wont-Pause-Dismissal-Of-114M-Discord-Stock-Case-Law360.pdf" rel="noopener">
+            <div class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="Law360 favicon">
+            </div>
+            <div>
+              <h3>Law360 (PDF): Judge won’t pause dismissal</h3>
+              <p class="metatext">Follow-up coverage of post-dismissal motion practice.</p>
+              <div class="domain">law360.com (PDF)</div>
+            </div>
+          </a>
+
+          <!-- DYNAMIS LLP -->
+          <a class="cardlink" href="https://www.dynamisllp.com/media/114m-discord-case-tossed" rel="noopener">
+            <div class="ico">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=dynamisllp.com" alt="Dynamis favicon">
+            </div>
+            <div>
+              <h3>Dynamis LLP: Dismissal summary</h3>
+              <p class="metatext">Short legal summary of the dismissal.</p>
+              <div class="domain">dynamisllp.com</div>
+            </div>
+          </a>
+
+        </div>
       </section>
 
       <footer>
