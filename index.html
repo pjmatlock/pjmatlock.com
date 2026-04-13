@@ -67,8 +67,6 @@
         radial-gradient(ellipse 600px 400px at 10% 90%, rgba(52, 211, 153, .08), transparent 60%),
         radial-gradient(ellipse 400px 400px at 50% 50%, rgba(96, 165, 250, .04), transparent 70%);
     }
-
-    /* Grain overlay */
     .bg-glow::after {
       content: ''; position: absolute; inset: 0;
       background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
@@ -103,7 +101,7 @@
 
     /* Hero */
     .hero {
-      padding: 120px 0 80px;
+      padding: 80px 0 40px;
       text-align: center;
       position: relative;
     }
@@ -113,26 +111,16 @@
       background: radial-gradient(circle, rgba(96,165,250,.08) 0%, transparent 70%);
       pointer-events: none;
     }
-    .hero-label {
-      display: inline-block; font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 20px;
-      padding: 6px 16px; border-radius: 100px;
-      background: rgba(96,165,250,.08); border: 1px solid rgba(96,165,250,.15);
-    }
     .hero h1 {
       font-size: clamp(2.8rem, 7vw, 4.5rem);
       font-weight: 900; letter-spacing: -.02em;
       line-height: 1.1; color: #fff;
-      margin-bottom: 20px;
+      margin-bottom: 32px;
     }
     .hero h1 span {
       background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
-    }
-    .hero-sub {
-      font-size: 1.2rem; color: var(--muted); max-width: 600px; margin: 0 auto 40px;
-      line-height: 1.7;
     }
 
     /* Social buttons */
@@ -149,7 +137,7 @@
     .social-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
 
     /* Sections */
-    .section { padding: 80px 0; }
+    .section { padding: 40px 0; }
     .section-label {
       font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
       color: var(--accent-green); margin-bottom: 12px;
@@ -158,7 +146,7 @@
       font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800;
       color: var(--fg-bright); margin-bottom: 16px; letter-spacing: -.01em;
     }
-    .section-desc { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin-bottom: 40px; }
+    .section-desc { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin-bottom: 32px; }
 
     /* Divider */
     .divider { border: none; border-top: 1px solid var(--line); margin: 0; }
@@ -183,7 +171,7 @@
 
     /* Case banner */
     .case-banner {
-      border-radius: 24px; padding: 48px 40px;
+      border-radius: 24px; padding: 40px 36px;
       background: linear-gradient(135deg, rgba(14,20,33,.8) 0%, rgba(9,14,24,.9) 100%);
       border: 1px solid var(--line);
       position: relative; overflow: hidden;
@@ -211,7 +199,7 @@
     .case-banner .case-btn svg { width: 18px; height: 18px; }
 
     /* Key points */
-    .key-points { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .key-points { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
     @media (max-width: 768px) { .key-points { grid-template-columns: 1fr; } }
     .key-point {
       display: flex; gap: 14px; align-items: flex-start;
@@ -227,20 +215,20 @@
     .key-point h4 { font-size: .95rem; font-weight: 700; color: var(--fg-bright); margin-bottom: 4px; }
     .key-point p { font-size: .88rem; color: var(--muted); }
 
-    /* Quote */
+    /* Statement */
     .statement {
-      margin-top: 80px; padding: 40px; border-radius: 20px;
+      margin-top: 40px; padding: 36px; border-radius: 20px;
       background: var(--surface); border: 1px solid var(--line);
       text-align: center;
     }
-    .statement blockquote {
-      font-size: 1.2rem; font-style: italic; color: var(--fg-bright);
-      max-width: 680px; margin: 0 auto 16px; line-height: 1.7;
+    .statement p {
+      font-size: 1.15rem; color: var(--fg-bright);
+      max-width: 700px; margin: 0 auto; line-height: 1.7;
     }
-    .statement cite { font-size: .9rem; color: var(--muted); font-style: normal; }
 
     /* Footer */
     footer {
+      margin-top: 40px;
       padding: 32px 0; text-align: center;
       border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem;
     }
@@ -282,12 +270,7 @@
   <div class="wrap">
     <section class="hero">
       <div class="fade-up">
-        <div class="hero-label">Trader &middot; Entrepreneur &middot; Atlas Founder</div>
         <h1>PJ <span>Matlock</span></h1>
-        <p class="hero-sub">
-          Day trader, community builder, and founder of Atlas Trading.
-          I trade markets, build communities, and say what I think.
-        </p>
         <div class="social-row">
           <a class="social-btn" href="https://discord.gg/atlastrading" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
@@ -311,7 +294,7 @@
     <section class="section">
       <div class="section-label">About</div>
       <h2>Who I Am</h2>
-      <p class="section-desc">I built one of the largest retail trading communities on Discord from the ground up. Here's what I do.</p>
+      <p class="section-desc">I built one of the largest retail trading communities on Discord from the ground up.</p>
       <div class="about-grid">
         <div class="about-card fade-up">
           <div class="about-icon">
@@ -342,10 +325,10 @@
     <!-- Case Overview -->
     <section class="section">
       <div class="case-banner fade-up">
-        <div class="tag">Case Update &mdash; April 2026</div>
+        <div class="tag">Case Update - April 2026</div>
         <h2>The Government's Case Has Fundamental Problems</h2>
         <p>
-          In 2022, the DOJ brought charges. In 2024, a federal judge threw them out. The government appealed, and the case was sent back on procedural grounds. No trial. No finding of guilt. No evidence tested. The government still has to prove its case &mdash; and I don't believe it can.
+          In 2022, the DOJ brought charges. In 2024, a federal judge threw them out. The government appealed, and the Fifth Circuit sent the case back on narrow procedural grounds. No trial has occurred. No evidence has been tested. No jury has heard a single fact. The government still has to prove its entire case, and the core legal issues that led to dismissal in the first place have not gone away.
         </p>
         <a href="/case-status/" class="case-btn">
           Read Full Case Status
@@ -358,8 +341,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div>
-              <h4>Dismissed Once Already</h4>
-              <p>A federal judge reviewed the indictment and dismissed it in March 2024, before trial.</p>
+              <h4>Already Dismissed Once</h4>
+              <p>A federal judge reviewed the government's indictment, found it legally deficient, and dismissed it before trial in March 2024.</p>
             </div>
           </div>
           <div class="key-point">
@@ -367,8 +350,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div>
-              <h4>No Trial, No Guilt Finding</h4>
-              <p>The reversal was procedural. Zero evidence has been tested. I am presumed innocent.</p>
+              <h4>No Trial, No Evidence Tested</h4>
+              <p>The Fifth Circuit reversal was procedural. Zero witnesses have testified. Zero exhibits have been admitted. The presumption of innocence stands.</p>
             </div>
           </div>
           <div class="key-point">
@@ -376,8 +359,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div>
-              <h4>The Theory Doesn't Hold</h4>
-              <p>Sharing opinions about stocks isn't fraud. The government conflates influence with deception.</p>
+              <h4>Materiality Is the Real Battleground</h4>
+              <p>The Fifth Circuit resolved one narrow element. It did not address whether any statement was actually false, material, or made with intent to defraud. Those are the questions that decide this case.</p>
             </div>
           </div>
           <div class="key-point">
@@ -385,8 +368,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div>
-              <h4>Bigger Than My Case</h4>
-              <p>If this theory sticks, every retail trader who posts a bullish take online could be next.</p>
+              <h4>This Affects Everyone</h4>
+              <p>If the government's theory holds, any retail trader who posts a bullish take and later sells could face a federal indictment. The line between fraud and free speech matters.</p>
             </div>
           </div>
         </div>
@@ -395,13 +378,11 @@
 
     <!-- Statement -->
     <div class="statement fade-up">
-      <blockquote>
-        "I maintain my innocence. I will fight this in court, and I believe the facts and the law are on my side. The government's theory turns ordinary market speech into a felony &mdash; that should concern everyone who participates in public markets."
-      </blockquote>
-      <cite>&mdash; PJ Matlock</cite>
+      <p>
+        I maintain my innocence and I will fight this in court. The government's theory turns ordinary market speech into a federal crime. That should concern every person who participates in public markets, posts about stocks online, or believes that sharing an opinion is not a felony. The facts and the law are on my side, and when this case is fully litigated, I believe that will be clear.
+      </p>
     </div>
 
-    <div style="height: 80px;"></div>
   </div>
 
   <!-- Footer -->
