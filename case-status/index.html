@@ -333,6 +333,47 @@
         to { opacity: 1; transform: translateY(0); }
       }
     }
+
+    /* Print styles */
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+      body { background: #050709 !important; }
+      .bg-glow { display: none; }
+      nav { position: static; backdrop-filter: none; -webkit-backdrop-filter: none; background: #050709 !important; }
+      .fade-up { opacity: 1 !important; transform: none !important; animation: none !important; }
+
+      /* Keep grids side by side */
+      .problems-grid { grid-template-columns: 1fr 1fr !important; gap: 12px; }
+      .sources-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+      .key-points { grid-template-columns: 1fr 1fr !important; }
+
+      /* Prevent cards from breaking across pages */
+      .problem-card, .source-card, .highlight-box, .faq-item, .status-callout, .closing { break-inside: avoid; }
+      .content-section { break-inside: avoid; }
+      .timeline { break-inside: avoid; }
+
+      /* Tighten spacing for print */
+      .page-hdr { padding: 30px 0 20px; }
+      .content-section { margin-bottom: 28px; }
+      .tl-item { margin-bottom: 18px; }
+      .problem-card { padding: 16px 14px; }
+      .faq-section { break-before: page; }
+
+      /* Make sure borders/backgrounds show */
+      .problem-card, .highlight-box, .status-callout, .source-card, .faq-item, .closing {
+        border: 1px solid #334155 !important;
+        background: rgba(14, 20, 33, .55) !important;
+      }
+      .highlight-box.important { border-left: 3px solid var(--accent) !important; }
+      .highlight-box.green { border-left: 3px solid var(--accent-green) !important; }
+      .status-callout::before { background: linear-gradient(90deg, var(--accent), var(--accent-green)) !important; }
+
+      /* Timeline dots */
+      .tl-items::before { background: linear-gradient(180deg, var(--accent-green), var(--accent), var(--accent-amber), var(--line)) !important; }
+      .tl-dot { border: 2px solid var(--accent) !important; background: #050709 !important; }
+      .tl-item.green .tl-dot { border-color: var(--accent-green) !important; }
+      .tl-item.amber .tl-dot { border-color: var(--accent-amber) !important; }
+    }
   </style>
 </head>
 <body>

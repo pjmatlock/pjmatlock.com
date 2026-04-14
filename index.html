@@ -248,6 +248,20 @@
       .fade-up:nth-child(3) { animation-delay: .16s; }
       .fade-up:nth-child(4) { animation-delay: .24s; }
     }
+
+    /* Print styles */
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+      body { background: #050709 !important; }
+      .bg-glow { display: none; }
+      nav { position: static; backdrop-filter: none; background: #050709 !important; }
+      .fade-up { opacity: 1 !important; transform: none !important; animation: none !important; }
+      .about-grid { grid-template-columns: repeat(3, 1fr) !important; }
+      .key-points { grid-template-columns: 1fr 1fr !important; }
+      .about-card, .key-point, .case-banner, .statement { break-inside: avoid; border: 1px solid #334155 !important; }
+      .case-banner { background: rgba(14,20,33,.8) !important; }
+      .case-banner::before { background: linear-gradient(90deg, transparent, var(--accent), transparent) !important; }
+    }
   </style>
 </head>
 <body>
