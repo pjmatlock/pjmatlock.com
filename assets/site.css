@@ -163,15 +163,22 @@ nav {
 .nav-promo .np-dot { color: var(--dim); margin: 0 2px; }
 .nav-promo .np-code { font-family: var(--font-display); font-weight: 700; letter-spacing: .08em; color: var(--green-bright); }
 
+/* Sticky header: nav + offer strip stay pinned together on scroll */
+.site-header { position: sticky; top: 0; z-index: 300; }
+.site-header nav { position: static; }
+
 /* Homepage-only offer strip under the nav bar */
 .promo-bar {
   display: block; text-align: center; text-decoration: none;
   padding: 10px 16px; font-size: .85rem; font-weight: 600; line-height: 1.4;
-  color: var(--ink-soft); background: rgba(47, 224, 166, .06);
+  color: var(--ink-soft);
+  background: rgba(11, 22, 18, .82);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
   border-bottom: 1px solid var(--hairline);
   transition: background .2s, color .2s;
 }
-.promo-bar:hover { text-decoration: none; background: rgba(47, 224, 166, .12); color: var(--ink); }
+.promo-bar:hover { text-decoration: none; background: rgba(17, 33, 27, .9); color: var(--ink); }
 .promo-bar .pb-brand { color: var(--ink); font-weight: 700; }
 .promo-bar .pb-dot { color: var(--dim); margin: 0 4px; }
 .promo-bar .pb-code { font-family: var(--font-display); font-weight: 700; color: var(--green-bright); letter-spacing: .1em; }
