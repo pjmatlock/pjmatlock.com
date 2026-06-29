@@ -7,6 +7,13 @@
   <meta name="description" content="Full case status for United States v. Constantinescu et al. Complete timeline from 2022 charges through 2026, defense overview on materiality and the government's theory, sources, and detailed FAQs." />
   <link rel="canonical" href="https://pjmatlock.com/case-status/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#05070d" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="PJ Matlock - Case Status (April 2026)" />
@@ -14,10 +21,14 @@
   <meta property="og:url" content="https://pjmatlock.com/case-status/" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="PJ Matlock Official" />
-  <meta property="og:image" content="https://pjmatlock.com/assets/og-default.jpg" />
+  <meta property="og:image" content="https://pjmatlock.com/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PJ Matlock - Case Status" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@pj_matlock" />
   <meta name="twitter:creator" content="@pj_matlock" />
+  <meta name="twitter:image" content="https://pjmatlock.com/assets/og.png" />
 
   <!-- Person -->
   <script type="application/ld+json">
@@ -95,375 +106,138 @@
   }
   </script>
 
-  <style>
-    :root {
-      --fg: #e5e7eb;
-      --fg-bright: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #60a5fa;
-      --accent-green: #34d399;
-      --accent-amber: #fbbf24;
-      --accent-red: #f87171;
-      --line: rgba(34, 48, 71, .6);
-      --surface: rgba(14, 20, 33, .55);
-      --surface-hover: rgba(20, 28, 45, .7);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      color: var(--fg);
-      background: #050709;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Ambient background */
-    .bg-glow {
-      position: fixed; inset: 0; z-index: -1; pointer-events: none;
-      background:
-        radial-gradient(ellipse 1100px 600px at 15% 10%, rgba(30, 41, 59, .9), transparent 70%),
-        radial-gradient(ellipse 800px 500px at 85% 5%, rgba(96, 165, 250, .12), transparent 60%),
-        radial-gradient(ellipse 600px 400px at 10% 90%, rgba(52, 211, 153, .08), transparent 60%);
-    }
-    .bg-glow::after {
-      content: ''; position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-      opacity: .4;
-    }
-
-    .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
-
-    /* Nav */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      background: rgba(5, 7, 12, .75);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner {
-      max-width: 860px; margin: 0 auto; padding: 16px 24px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .nav-brand { font-weight: 800; font-size: 1.25rem; color: var(--fg-bright); letter-spacing: .01em; text-decoration: none; }
-    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
-    .nav-link {
-      text-decoration: none; font-weight: 600; font-size: .9rem;
-      padding: 8px 14px; border-radius: 10px;
-      color: var(--muted); transition: all .15s ease;
-      border: 1px solid transparent;
-    }
-    .nav-link:hover { color: var(--fg-bright); background: rgba(255,255,255,.04); border-color: var(--line); }
-    .nav-link.active { color: var(--accent); background: rgba(96,165,250,.08); border-color: rgba(96,165,250,.2); }
-
-    /* Page header */
-    .page-hdr { padding: 48px 0 32px; }
-    .page-hdr .back-link { font-size: .9rem; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; margin-bottom: 16px; }
-    .page-hdr .back-link:hover { color: var(--accent); text-decoration: none; }
-    .page-hdr h1 {
-      font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 900;
-      color: #fff; letter-spacing: -.02em; margin-bottom: 8px; line-height: 1.15;
-    }
-    .page-hdr .case-id { color: var(--muted); font-size: .95rem; }
-
-    /* Status callout */
-    .status-callout {
-      padding: 24px 28px; border-radius: 18px; margin-bottom: 40px;
-      background: linear-gradient(135deg, rgba(96,165,250,.06) 0%, rgba(52,211,153,.04) 100%);
-      border: 1px solid rgba(96,165,250,.15);
-      position: relative; overflow: hidden;
-    }
-    .status-callout::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-green));
-    }
-    .status-callout .status-label {
-      display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-      padding: 3px 10px; border-radius: 6px; margin-bottom: 10px;
-      color: var(--accent-amber); background: rgba(251,191,36,.08); border: 1px solid rgba(251,191,36,.12);
-    }
-    .status-callout p { color: var(--fg-bright); font-size: 1.05rem; font-weight: 500; }
-
-    /* Timeline */
-    .timeline { margin-bottom: 48px; }
-    .timeline h2 { font-size: 1.5rem; font-weight: 800; color: var(--fg-bright); margin-bottom: 24px; }
-    .tl-items { position: relative; padding-left: 32px; }
-    .tl-items::before {
-      content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px;
-      background: linear-gradient(180deg, var(--accent-green), var(--accent), var(--accent), var(--accent-amber), var(--line));
-      border-radius: 2px;
-    }
-    .tl-item { position: relative; margin-bottom: 28px; }
-    .tl-item:last-child { margin-bottom: 0; }
-    .tl-dot {
-      position: absolute; left: -32px; top: 6px;
-      width: 16px; height: 16px; border-radius: 50%;
-      background: #050709; border: 2px solid var(--accent);
-      z-index: 1;
-    }
-    .tl-item.green .tl-dot { border-color: var(--accent-green); box-shadow: 0 0 12px rgba(52,211,153,.3); }
-    .tl-item.amber .tl-dot { border-color: var(--accent-amber); box-shadow: 0 0 12px rgba(251,191,36,.2); }
-    .tl-date { font-size: .85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
-    .tl-item.green .tl-date { color: var(--accent-green); }
-    .tl-item.amber .tl-date { color: var(--accent-amber); }
-    .tl-title { font-size: 1.05rem; font-weight: 700; color: var(--fg-bright); margin-bottom: 4px; }
-    .tl-desc { color: var(--muted); font-size: .95rem; }
-
-    /* Content sections */
-    .content-section { margin-bottom: 40px; }
-    .content-section h2 {
-      font-size: 1.35rem; font-weight: 800; color: var(--fg-bright); margin-bottom: 16px;
-      padding-bottom: 12px; border-bottom: 1px solid var(--line);
-    }
-    .content-section p { margin-bottom: 14px; color: var(--fg); }
-    .content-section p:last-child { margin-bottom: 0; }
-
-    /* Highlight box */
-    .highlight-box {
-      padding: 24px 28px; border-radius: 16px; margin: 24px 0;
-      background: var(--surface); border: 1px solid var(--line);
-    }
-    .highlight-box.important { border-left: 3px solid var(--accent); }
-    .highlight-box.green { border-left: 3px solid var(--accent-green); }
-    .highlight-box h3 { font-size: 1.05rem; font-weight: 700; color: var(--fg-bright); margin-bottom: 8px; }
-    .highlight-box p { color: var(--muted); font-size: .95rem; margin-bottom: 10px; }
-    .highlight-box p:last-child { margin-bottom: 0; }
-    .highlight-box ul { padding-left: 1.2rem; margin: 8px 0; }
-    .highlight-box li { color: var(--muted); font-size: .95rem; margin-bottom: 6px; }
-
-    /* Problems grid */
-    .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
-    @media (max-width: 640px) { .problems-grid { grid-template-columns: 1fr; } }
-    .problem-card {
-      padding: 24px 22px; border-radius: 16px;
-      background: var(--surface); border: 1px solid var(--line);
-    }
-    .problem-card .problem-num {
-      display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
-      padding: 3px 8px; border-radius: 6px; margin-bottom: 12px;
-      color: var(--accent); background: rgba(96,165,250,.08); border: 1px solid rgba(96,165,250,.1);
-    }
-    .problem-card h3 { font-size: 1rem; font-weight: 700; color: var(--fg-bright); margin-bottom: 8px; }
-    .problem-card p { color: var(--muted); font-size: .9rem; margin-bottom: 8px; }
-    .problem-card p:last-child { margin-bottom: 0; }
-
-    /* Sources */
-    .sources-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 16px; }
-    @media (max-width: 640px) { .sources-grid { grid-template-columns: 1fr; } }
-    .source-card {
-      display: flex; gap: 14px; align-items: flex-start;
-      text-decoration: none; color: var(--fg);
-      padding: 18px; border-radius: 16px;
-      background: var(--surface); border: 1px solid var(--line);
-      transition: all .15s ease;
-    }
-    .source-card:hover { transform: translateY(-2px); border-color: rgba(96,165,250,.2); box-shadow: 0 8px 30px rgba(0,0,0,.3); text-decoration: none; }
-    .source-icon {
-      flex: 0 0 32px; height: 32px; border-radius: 8px; overflow: hidden;
-      background: rgba(15, 23, 42, .8); display: grid; place-items: center;
-    }
-    .source-icon img { width: 20px; height: 20px; }
-    .source-card h3 { font-size: .95rem; font-weight: 700; color: var(--fg-bright); margin-bottom: 3px; line-height: 1.3; }
-    .source-card .source-meta { color: var(--muted); font-size: .85rem; }
-    .source-card .source-domain { font-weight: 600; color: #cbd5e1; font-size: .85rem; }
-
-    /* FAQ */
-    .faq-section { margin-bottom: 40px; }
-    .faq-section h2 {
-      font-size: 1.35rem; font-weight: 800; color: var(--fg-bright); margin-bottom: 20px;
-      padding-bottom: 12px; border-bottom: 1px solid var(--line);
-    }
-    .faq-item {
-      border: 1px solid var(--line); border-radius: 14px;
-      margin-bottom: 10px; overflow: hidden;
-      background: var(--surface); transition: border-color .15s ease;
-    }
-    .faq-item:hover { border-color: rgba(96,165,250,.15); }
-    .faq-q {
-      width: 100%; padding: 18px 22px; border: none; background: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      font-size: 1rem; font-weight: 700; color: var(--fg-bright); text-align: left;
-      font-family: inherit;
-    }
-    .faq-q:hover { color: #fff; }
-    .faq-chevron {
-      width: 20px; height: 20px; flex-shrink: 0;
-      transition: transform .2s ease; color: var(--muted);
-    }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-a {
-      max-height: 0; overflow: hidden; transition: max-height .3s ease;
-    }
-    .faq-item.open .faq-a { max-height: 800px; }
-    .faq-a-inner {
-      padding: 0 22px 20px; color: var(--muted); font-size: .95rem; line-height: 1.7;
-    }
-    .faq-a-inner p { margin-bottom: 10px; }
-    .faq-a-inner p:last-child { margin-bottom: 0; }
-
-    /* Closing statement */
-    .closing {
-      text-align: center; padding: 40px 32px; margin-bottom: 40px;
-      border-radius: 20px;
-      background: var(--surface); border: 1px solid var(--line);
-    }
-    .closing p {
-      font-size: 1.1rem; color: var(--fg-bright);
-      max-width: 660px; margin: 0 auto; line-height: 1.7;
-    }
-
-    /* Footer */
-    footer {
-      padding: 28px 0; text-align: center;
-      border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem;
-    }
-    footer a { color: var(--accent); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* Animations */
-    @media (prefers-reduced-motion: no-preference) {
-      .fade-up {
-        opacity: 0; transform: translateY(20px);
-        animation: fadeUp .5s ease forwards;
-      }
-      @keyframes fadeUp {
-        to { opacity: 1; transform: translateY(0); }
-      }
-    }
-
-    /* Print styles */
-    @media print {
-      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
-      body { background: #050709 !important; }
-      .bg-glow { display: none; }
-      nav { position: static; backdrop-filter: none; -webkit-backdrop-filter: none; background: #050709 !important; }
-      .fade-up { opacity: 1 !important; transform: none !important; animation: none !important; }
-
-      /* Keep grids side by side */
-      .problems-grid { grid-template-columns: 1fr 1fr !important; gap: 12px; }
-      .sources-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
-      .key-points { grid-template-columns: 1fr 1fr !important; }
-
-      /* Prevent cards from breaking across pages */
-      .problem-card, .source-card, .highlight-box, .faq-item, .status-callout, .closing { break-inside: avoid; }
-      .content-section { break-inside: avoid; }
-      .timeline { break-inside: avoid; }
-
-      /* Tighten spacing for print */
-      .page-hdr { padding: 30px 0 20px; }
-      .content-section { margin-bottom: 28px; }
-      .tl-item { margin-bottom: 18px; }
-      .problem-card { padding: 16px 14px; }
-      .faq-section { break-before: page; }
-
-      /* Make sure borders/backgrounds show */
-      .problem-card, .highlight-box, .status-callout, .source-card, .faq-item, .closing {
-        border: 1px solid #334155 !important;
-        background: rgba(14, 20, 33, .55) !important;
-      }
-      .highlight-box.important { border-left: 3px solid var(--accent) !important; }
-      .highlight-box.green { border-left: 3px solid var(--accent-green) !important; }
-      .status-callout::before { background: linear-gradient(90deg, var(--accent), var(--accent-green)) !important; }
-
-      /* Timeline dots */
-      .tl-items::before { background: linear-gradient(180deg, var(--accent-green), var(--accent), var(--accent-amber), var(--line)) !important; }
-      .tl-dot { border: 2px solid var(--accent) !important; background: #050709 !important; }
-      .tl-item.green .tl-dot { border-color: var(--accent-green) !important; }
-      .tl-item.amber .tl-dot { border-color: var(--accent-amber) !important; }
-    }
-  </style>
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script src="/assets/site.js" defer></script>
 </head>
 <body>
-  <div class="bg-glow"></div>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
-      <a href="/" class="nav-brand">PJ Matlock</a>
-      <div class="nav-links">
+      <a href="/" class="nav-brand" aria-label="PJ Matlock home">
+        <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <defs><linearGradient id="nm" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4d8dff"/><stop offset=".5" stop-color="#43c6ff"/><stop offset="1" stop-color="#2fe0a6"/></linearGradient></defs>
+          <rect x="3" y="3" width="94" height="94" rx="24" fill="#0a0f1a"/>
+          <rect x="3.75" y="3.75" width="92.5" height="92.5" rx="23.25" fill="none" stroke="url(#nm)" stroke-width="2.5" opacity=".9"/>
+          <polyline points="22,68 40,52 56,61 78,30" fill="none" stroke="url(#nm)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="78" cy="30" r="7" fill="#2fe0a6"/>
+        </svg>
+        PJ Matlock
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links" id="navlinks">
         <a href="/" class="nav-link">Home</a>
         <a href="/case-status/" class="nav-link active">Case Status</a>
-        <a href="https://discord.gg/atlastrading" class="nav-link" target="_blank" rel="noopener">Discord</a>
-        <a href="https://x.com/pj_matlock" class="nav-link" target="_blank" rel="me noopener">X</a>
+        <a href="https://discord.gg/atlastrading" class="nav-link ext" target="_blank" rel="noopener">Discord</a>
+        <a href="https://x.com/pj_matlock" class="nav-link ext" target="_blank" rel="me noopener">X</a>
       </div>
     </div>
   </nav>
 
-  <div class="wrap">
+  <main class="wrap read">
 
     <!-- Page Header -->
-    <header class="page-hdr fade-up">
-      <a href="/" class="back-link">&larr; Back to Home</a>
+    <header class="page-hdr reveal in">
+      <a href="/" class="back-link"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Home</a>
       <h1>Case Status</h1>
       <div class="case-id">United States v. Constantinescu et al., S.D. Tex. (4:22-cr-00612)</div>
     </header>
 
     <!-- Status Callout -->
-    <div class="status-callout fade-up">
-      <div class="status-label">Current Status</div>
+    <div class="status-callout reveal">
+      <div class="status-label"><span class="dot"></span> Current Status</div>
       <p>The indictment was <strong>dismissed</strong> on March 20, 2024, <strong>reversed on appeal</strong> on October 2, 2025 on narrow grounds, and the case is currently <strong>pending again</strong> in the Southern District of Texas. No trial has taken place. No evidence has been tested. I am presumed innocent and I maintain that innocence.</p>
     </div>
 
     <!-- Timeline -->
-    <section class="timeline fade-up">
+    <section class="timeline content-section reveal">
       <h2>Full Timeline</h2>
       <div class="tl-items">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">December 2022</div>
-          <div class="tl-title">Federal Indictment</div>
-          <div class="tl-desc">A federal grand jury in the Southern District of Texas returned an indictment charging PJ Matlock and several co-defendants with securities fraud conspiracy. The case was assigned to Judge Andrew S. Hanen.</div>
+          <div class="tl-card">
+            <div class="tl-date">December 2022</div>
+            <div class="tl-title">Federal Indictment</div>
+            <div class="tl-desc">A federal grand jury in the Southern District of Texas returned an indictment charging PJ Matlock and several co-defendants with securities fraud conspiracy. The case was assigned to Judge Andrew S. Hanen.</div>
+          </div>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">2023</div>
-          <div class="tl-title">Superseding Indictment</div>
-          <div class="tl-desc">The government filed a superseding indictment, which replaced the original charges. The defense filed motions to dismiss, arguing that the indictment failed to state a valid offense as a matter of law.</div>
+          <div class="tl-card">
+            <div class="tl-date">2023</div>
+            <div class="tl-title">Superseding Indictment</div>
+            <div class="tl-desc">The government filed a superseding indictment, which replaced the original charges. The defense filed motions to dismiss, arguing that the indictment failed to state a valid offense as a matter of law.</div>
+          </div>
         </div>
+
         <div class="tl-item green">
           <div class="tl-dot"></div>
-          <div class="tl-date">March 20, 2024</div>
-          <div class="tl-title">Indictment Dismissed</div>
-          <div class="tl-desc">The district court granted the motion to dismiss the superseding indictment. The court found that the government's charges were legally insufficient. This was a pretrial ruling on the law, not a trial on the facts. The case was dismissed before a jury was ever seated.</div>
+          <div class="tl-card">
+            <div class="tl-date">March 20, 2024</div>
+            <div class="tl-title">Indictment Dismissed</div>
+            <div class="tl-desc">The district court granted the motion to dismiss the superseding indictment. The court found that the government's charges were legally insufficient. This was a pretrial ruling on the law, not a trial on the facts. The case was dismissed before a jury was ever seated.</div>
+          </div>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">2024</div>
-          <div class="tl-title">Government Appeals to the Fifth Circuit</div>
-          <div class="tl-desc">The government appealed the dismissal to the United States Court of Appeals for the Fifth Circuit. Both sides briefed the legal issues. The appeal centered on the "money or property" element of the fraud statute in light of recent Supreme Court decisions in Ciminelli v. United States and Kousisis v. United States, which reshaped the legal landscape around what constitutes a cognizable loss in fraud cases.</div>
+          <div class="tl-card">
+            <div class="tl-date">2024</div>
+            <div class="tl-title">Government Appeals to the Fifth Circuit</div>
+            <div class="tl-desc">The government appealed the dismissal to the United States Court of Appeals for the Fifth Circuit. Both sides briefed the legal issues. The appeal centered on the "money or property" element of the fraud statute in light of recent Supreme Court decisions in Ciminelli v. United States and Kousisis v. United States, which reshaped the legal landscape around what constitutes a cognizable loss in fraud cases.</div>
+          </div>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">2025</div>
-          <div class="tl-title">Fifth Circuit Oral Argument</div>
-          <div class="tl-desc">The Fifth Circuit heard oral argument from both the government and defense counsel. The panel questioned both sides on the application of Ciminelli and Kousisis to this case, the meaning of "money or property" in the fraud statute, and whether the government's theory of loss was legally viable. The panel did not address the central flaw in the indictment: whether it alleges a single materially false statement about any issuer or security.</div>
+          <div class="tl-card">
+            <div class="tl-date">2025</div>
+            <div class="tl-title">Fifth Circuit Oral Argument</div>
+            <div class="tl-desc">The Fifth Circuit heard oral argument from both the government and defense counsel. The panel questioned both sides on the application of Ciminelli and Kousisis to this case, the meaning of "money or property" in the fraud statute, and whether the government's theory of loss was legally viable. The panel did not address the central flaw in the indictment: whether it alleges a single materially false statement about any issuer or security.</div>
+          </div>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">October 2, 2025</div>
-          <div class="tl-title">Fifth Circuit Reverses on Narrow Grounds</div>
-          <div class="tl-desc">The Fifth Circuit reversed the dismissal and remanded the case. The court's ruling was narrow: it addressed the "money or property" element of the fraud statute, relying in part on the Supreme Court's decision in Kousisis v. United States. The court held that the indictment adequately alleged that element at the pleading stage. Critically, the Fifth Circuit did not rule on whether any statement was actually false, whether any statement was material, or whether there was criminal intent. Those are the core issues in this case, and they remain unresolved.</div>
+          <div class="tl-card">
+            <div class="tl-date">October 2, 2025</div>
+            <div class="tl-title">Fifth Circuit Reverses on Narrow Grounds</div>
+            <div class="tl-desc">The Fifth Circuit reversed the dismissal and remanded the case. The court's ruling was narrow: it addressed the "money or property" element of the fraud statute, relying in part on the Supreme Court's decision in Kousisis v. United States. The court held that the indictment adequately alleged that element at the pleading stage. Critically, the Fifth Circuit did not rule on whether any statement was actually false, whether any statement was material, or whether there was criminal intent. Those are the core issues in this case, and they remain unresolved.</div>
+          </div>
         </div>
+
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">Late 2025</div>
-          <div class="tl-title">Judicial Recusal and Reassignment</div>
-          <div class="tl-desc">Following the remand, Judge Andrew S. Hanen recused from the case. The case was reassigned to Judge Alfred H. Bennett in the Southern District of Texas.</div>
+          <div class="tl-card">
+            <div class="tl-date">Late 2025</div>
+            <div class="tl-title">Judicial Recusal and Reassignment</div>
+            <div class="tl-desc">Following the remand, Judge Andrew S. Hanen recused from the case. The case was reassigned to Judge Alfred H. Bennett in the Southern District of Texas.</div>
+          </div>
         </div>
+
         <div class="tl-item amber">
           <div class="tl-dot"></div>
-          <div class="tl-date">April 2026</div>
-          <div class="tl-title">Case Pending</div>
-          <div class="tl-desc">The case is back in the district court for further proceedings. No trial date has been set. The defense continues to challenge the legal sufficiency of the government's theory. The core questions of materiality, falsity, and scienter have never been addressed by any court and remain the central battleground of this case.</div>
+          <div class="tl-card">
+            <div class="tl-date">April 2026</div>
+            <div class="tl-title">Case Pending</div>
+            <div class="tl-desc">The case is back in the district court for further proceedings. No trial date has been set. The defense continues to challenge the legal sufficiency of the government's theory. The core questions of materiality, falsity, and scienter have never been addressed by any court and remain the central battleground of this case.</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- What the 5th Circuit decided -->
-    <section class="content-section fade-up">
+    <section class="content-section reveal">
       <h2>What the Fifth Circuit Actually Decided</h2>
       <p>
         The Fifth Circuit's October 2025 decision was narrow and procedural. Understanding what it did and did not decide is essential to understanding this case.
@@ -478,7 +252,7 @@
         But that was not the core dispute in this case, and it never has been. The real questions are about materiality, falsity, and intent, and the government must prove all three beyond a reasonable doubt to obtain a conviction.
       </p>
 
-      <div class="highlight-box important">
+      <div class="callout">
         <h3>What No Court Has Decided</h3>
         <ul>
           <li>Whether any specific statement by PJ Matlock was actually false</li>
@@ -492,40 +266,40 @@
     </section>
 
     <!-- Problems with the Government's Theory -->
-    <section class="content-section fade-up">
+    <section class="content-section reveal">
       <h2>Why the Government's Theory Has Problems</h2>
       <p>
         The full legal defense will be presented in court. But several structural problems with the government's theory are apparent from the public record and established law.
       </p>
 
-      <div class="problems-grid">
-        <div class="problem-card">
-          <div class="problem-num">Problem 01</div>
+      <div class="grid-2">
+        <div class="card problem spot">
+          <div class="num">Problem 01</div>
           <h3>No False Statement About Any Company</h3>
           <p>Securities fraud under 18 U.S.C. &sect; 1348 requires a materially false statement about the issuer or the security itself. The indictment does not identify a single false statement about any company's business, financials, operations, earnings, products, or intrinsic value. Instead, it points to ordinary trader commentary: messages like "holding," "adding," "swinging," subjective price hopes like "$10+ IMO," and generic references to "due diligence" and "catalysts."</p>
           <p>None of those are statements about any company. They are statements about the speaker's own trading position and personal outlook. The government has never identified what specific "due diligence" was fabricated, or which "catalyst" was false, or what was actually untrue about any issuer. Without a concrete, false statement about a company or security, there is no securities fraud as a matter of law.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-num">Problem 02</div>
+        <div class="card problem spot">
+          <div class="num">Problem 02</div>
           <h3>The Government Conflates Influence with Materiality</h3>
           <p>The government's theory boils down to: defendants had followers, defendants posted bullish views, followers may have traded, defendants later sold. That framing substitutes a follower-influence test for the actual legal standard. It treats popularity as the basis for fraud, which is not what the law requires.</p>
           <p>At oral argument before the Fifth Circuit, the government itself acknowledged that materiality is the "important limitation" that prevents this theory from criminalizing all public market commentary. When pressed on whether someone who "cries out to the open world" that a stock is "worth a ton" and then sells would face felony prosecution, the government answered "No," conceding that puffery and seller's talk are "generally rejected as being materially false." Yet the indictment charges exactly that kind of talk as the basis for a felony scheme.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-num">Problem 03</div>
+        <div class="card problem spot">
+          <div class="num">Problem 03</div>
           <h3>Materiality Requires Issuer-Level Falsehood</h3>
           <p>For fifty years, the Supreme Court has defined materiality by asking whether a statement would significantly alter the "total mix" of information about the issuer to a reasonable investor, including facts bearing on intrinsic value, financial condition, or essential characteristics of the security. See TSC Industries v. Northway (1976); Basic v. Levinson (1988); Matrixx Initiatives v. Siracusano (2011).</p>
           <p>That total mix is issuer-level information: the company's financial results and condition, operations, regulatory posture, corporate events, and required disclosures. A third-party commentator's personal opinions, trading positions, or future plans to sell are information about the speaker, not the company. They do not alter the intrinsic attributes of the security being bought or sold. The Supreme Court in Kousisis itself reinforced that materiality is "rigorous" and "demanding" and must go to the "essence of the bargain." In an open-market securities transaction, that bargain is cash for title to the security at market price. A commentator's undisclosed trading plans do not change what was bought.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-num">Problem 04</div>
+        <div class="card problem spot">
+          <div class="num">Problem 04</div>
           <h3>Kousisis Actually Reinforces the Defense</h3>
           <p>The Fifth Circuit relied on Kousisis v. United States to resolve the "money or property" element. But Kousisis was a government contracts case involving a direct lie about a specific contractual term (DBE participation) used to extract payments in a bilateral transaction. The Supreme Court held that fraud requires a misrepresentation that goes to the "nature of the bargain."</p>
           <p>That principle helps the defense, not the government. In open securities markets, purchasers bargain only for title to the security at the market price. They received exactly that. No issuer attribute was misrepresented. A speaker's personal motive for selling, or their prediction about future price movement, is collateral to that exchange. As Justice Thomas emphasized in his Kousisis concurrence, even alleged misstatements in a government contract may be immaterial where they do not change the contract's core economic value. If materiality is doubtful in that setting, it cannot be satisfied in a case with no contract, no fiduciary duty, and no alleged falsehood about any company or issuer.</p>
         </div>
       </div>
 
-      <div class="highlight-box green">
+      <div class="callout green">
         <h3>The Core Issue</h3>
         <p>The indictment has a structural defect: it alleges "false, positive information about the security" but the only statements it actually attributes to defendants are personal opinions, subjective price hopes, and undisclosed trading plans. None of those are false statements about any company or issuer. The government has even told the court it could "ignore the term 'false' altogether" and still send the case to a jury. That is not how securities fraud works.</p>
         <p>Under the Supreme Court's established framework, securities fraud requires a <strong>materially false statement about the issuer or the security itself</strong> that goes to the <strong>essence of the bargain</strong>, made with <strong>specific intent to defraud</strong>. The Fifth Circuit expressly did not reach materiality or falsity. Those are the questions that will decide this case.</p>
@@ -533,7 +307,7 @@
     </section>
 
     <!-- Why it matters -->
-    <section class="content-section fade-up">
+    <section class="content-section reveal">
       <h2>Why This Matters Beyond My Case</h2>
       <p>
         Markets are loud by design. Every day, millions of people share bullish and bearish views, post charts, debate catalysts, and change their minds in real time. That is not fraud. That is how markets work. That is how price discovery works.
@@ -547,196 +321,188 @@
     </section>
 
     <!-- Sources -->
-    <section class="content-section fade-up">
+    <section class="content-section reveal">
       <h2>Sources</h2>
-      <div class="sources-grid">
-        <a class="source-card" href="https://www.pacermonitor.com/view/5WMDVFY/USA_v_Constantinescu_et_al__txsdce-22-00612__0628.0.pdf" target="_blank" rel="noopener">
-          <div class="source-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=pacermonitor.com" alt=""></div>
+      <div class="sources">
+        <a class="card source" href="https://www.pacermonitor.com/view/5WMDVFY/USA_v_Constantinescu_et_al__txsdce-22-00612__0628.0.pdf" target="_blank" rel="noopener">
+          <div class="fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=pacermonitor.com" alt="" loading="lazy"></div>
           <div>
             <h3>District Court Dismissal Order</h3>
-            <p class="source-meta">March 20, 2024 - Pretrial dismissal</p>
-            <div class="source-domain">pacermonitor.com (PDF)</div>
+            <p class="meta">March 20, 2024 - Pretrial dismissal</p>
+            <div class="domain">pacermonitor.com (PDF)</div>
           </div>
         </a>
-        <a class="source-card" href="https://www.ca5.uscourts.gov/opinions/pub/24/24-20143-CV0.pdf" target="_blank" rel="noopener">
-          <div class="source-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=ca5.uscourts.gov" alt=""></div>
+        <a class="card source" href="https://www.ca5.uscourts.gov/opinions/pub/24/24-20143-CV0.pdf" target="_blank" rel="noopener">
+          <div class="fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=ca5.uscourts.gov" alt="" loading="lazy"></div>
           <div>
             <h3>Fifth Circuit Opinion</h3>
-            <p class="source-meta">October 2, 2025 - Reversal and remand</p>
-            <div class="source-domain">ca5.uscourts.gov (PDF)</div>
+            <p class="meta">October 2, 2025 - Reversal and remand</p>
+            <div class="domain">ca5.uscourts.gov (PDF)</div>
           </div>
         </a>
-        <a class="source-card" href="https://www.justice.gov/criminal/criminal-vns/case/united-states-v-constantinescu-et-al" target="_blank" rel="noopener">
-          <div class="source-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=justice.gov" alt=""></div>
+        <a class="card source" href="https://www.justice.gov/criminal/criminal-vns/case/united-states-v-constantinescu-et-al" target="_blank" rel="noopener">
+          <div class="fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=justice.gov" alt="" loading="lazy"></div>
           <div>
             <h3>DOJ Case Page</h3>
-            <p class="source-meta">Victim Notification Program</p>
-            <div class="source-domain">justice.gov</div>
+            <p class="meta">Victim Notification Program</p>
+            <div class="domain">justice.gov</div>
           </div>
         </a>
-        <a class="source-card" href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" target="_blank" rel="noopener">
-          <div class="source-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=variety.com" alt=""></div>
+        <a class="card source" href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" target="_blank" rel="noopener">
+          <div class="fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=variety.com" alt="" loading="lazy"></div>
           <div>
             <h3>Variety: Charges Dropped Coverage</h3>
-            <p class="source-meta">2024 dismissal coverage</p>
-            <div class="source-domain">variety.com</div>
+            <p class="meta">2024 dismissal coverage</p>
+            <div class="domain">variety.com</div>
           </div>
         </a>
-        <a class="source-card" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" target="_blank" rel="noopener">
-          <div class="source-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt=""></div>
+        <a class="card source" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" target="_blank" rel="noopener">
+          <div class="fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=law360.com" alt="" loading="lazy"></div>
           <div>
             <h3>Law360: Case Tossed Before Trial</h3>
-            <p class="source-meta">District court dismissal report</p>
-            <div class="source-domain">law360.com (PDF)</div>
+            <p class="meta">District court dismissal report</p>
+            <div class="domain">law360.com (PDF)</div>
           </div>
         </a>
-        <a class="source-card" href="https://www.dynamisllp.com/media/114m-discord-case-tossed" target="_blank" rel="noopener">
-          <div class="source-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=dynamisllp.com" alt=""></div>
+        <a class="card source" href="https://www.dynamisllp.com/media/114m-discord-case-tossed" target="_blank" rel="noopener">
+          <div class="fav"><img src="https://www.google.com/s2/favicons?sz=64&domain=dynamisllp.com" alt="" loading="lazy"></div>
           <div>
             <h3>Dynamis LLP: Dismissal Summary</h3>
-            <p class="source-meta">Legal analysis</p>
-            <div class="source-domain">dynamisllp.com</div>
+            <p class="meta">Legal analysis</p>
+            <div class="domain">dynamisllp.com</div>
           </div>
         </a>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq-section fade-up">
+    <section class="faq content-section reveal">
       <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Was PJ Matlock charged?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>Was PJ Matlock charged?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>Yes. In December 2022, a federal grand jury in the Southern District of Texas returned an indictment charging PJ Matlock and several co-defendants with securities fraud conspiracy. The government later filed a superseding indictment with revised charges.</p>
           <p>The district court dismissed the superseding indictment on March 20, 2024, finding the charges legally insufficient. The government appealed, and on October 2, 2025, the Fifth Circuit reversed on narrow procedural grounds and sent the case back to the district court.</p>
           <p>The case is currently pending. PJ Matlock maintains his innocence of all charges.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What is the current status of the case?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>What is the current status of the case?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>As of April 2026, the case is pending in the Southern District of Texas following the Fifth Circuit's reversal and remand. Judge Andrew S. Hanen has recused, and the case is now assigned to Judge Alfred H. Bennett.</p>
           <p>No trial date has been set. No evidence has been presented or tested in court. The core legal issues, including materiality, falsity, and scienter (criminal intent), remain unresolved and will be the subject of further proceedings. PJ Matlock continues to maintain his innocence.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Has any court found that PJ Matlock committed a crime?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>Has any court found that PJ Matlock committed a crime?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>No. No court at any level has found that PJ Matlock committed any criminal act.</p>
           <p>The district court dismissed the indictment before trial ever began. The Fifth Circuit reversed that dismissal, but its ruling was limited to whether the indictment was sufficient at the pleading stage, which is the lowest legal bar in federal criminal law. At the pleading stage, the court accepts the government's allegations as true for purposes of analysis only and asks whether the words on paper state an offense. The court does not weigh evidence, assess credibility, or determine whether the government can prove its case.</p>
           <p>Whether any statement was actually false, actually material, or made with criminal intent has never been decided by any court. The government must still prove every element beyond a reasonable doubt, and that has not happened.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Was PJ Matlock involved in a pump-and-dump?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>Was PJ Matlock involved in a pump-and-dump?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>The government alleges a securities fraud conspiracy. PJ Matlock categorically denies these allegations and maintains his innocence.</p>
           <p>It is important to understand what a "pump-and-dump" actually requires under the law. It is not enough to show that someone was bullish on a stock and later sold it. That is what traders do every day. A pump-and-dump requires proof that specific statements were objectively false (not just opinions), that those statements were material under the Supreme Court's "total mix" standard (not just influential), and that the defendant acted with specific intent to defraud (not just intent to trade profitably).</p>
           <p>A federal judge reviewed the government's indictment and dismissed it in March 2024, finding the charges legally insufficient. That dismissal was reversed on narrow procedural grounds in October 2025. No evidence has been tested at trial. PJ Matlock does not believe the government can meet its burden of proof on the elements that matter.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What about the line "we're robbing idiots of their money"?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>What about the line "we're robbing idiots of their money"?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>That statement was allegedly made in a private voice chat room. PJ Matlock was not in that chat room. The vast majority of the defendants in this case were not in that chat room.</p>
           <p>The statement is attributed in public reporting and court filings to a different defendant who later entered a guilty plea. PJ Matlock had no knowledge of that statement at the time it was allegedly made and had no involvement in it.</p>
           <p>It is important not to conflate the actions or statements of one individual with those of other people who were not present and had no knowledge of what was said.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What is materiality and why does it matter here?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>What is materiality and why does it matter here?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>Materiality is the legal standard that determines whether a statement is significant enough to form the basis of a securities fraud charge. It is not a subjective test and it is not about whether someone found a statement interesting or influential.</p>
           <p>Under the Supreme Court's standard from TSC Industries v. Northway (1976) and Basic v. Levinson (1988), a statement is material only if there is a "substantial likelihood that a reasonable investor would consider it important" in making an investment decision because it "significantly alters the total mix of information available" about the issuer and the security.</p>
           <p>That "total mix" refers to issuer-level information: the company's financial results and condition, its operations, regulatory posture, major corporate events, and required public disclosures. A third-party commentator's personal opinion about a stock, their subjective price target, or their future trading plans are information about the speaker, not the company. They do not change the total mix of information about the issuer or the security's fundamental value.</p>
           <p>This distinction is central to the defense. The government must show that specific statements significantly altered issuer-level information, not merely that someone with a following said something positive about a stock.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What did the Fifth Circuit actually decide?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>What did the Fifth Circuit actually decide?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>The Fifth Circuit's October 2025 decision was narrow. It addressed the "money or property" element of the wire fraud statute, relying on the Supreme Court's decision in Kousisis v. United States. The court held that, at the pleading stage, the indictment adequately alleged that element.</p>
           <p>The court did not rule on materiality, falsity, or scienter (criminal intent). Those are the core issues in this case and they remain unresolved. The Fifth Circuit's decision simply means the indictment can proceed past the pleading stage. It says nothing about whether the government can actually prove its case.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What does PJ Matlock trade?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>What does PJ Matlock trade?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>PJ Matlock primarily trades U.S. equities, options, futures, and some cryptocurrency, with day trading as the focus. Nothing he posts is financial advice. He does not manage money for others and has never traded on behalf of other people.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Was there a whistleblower?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>Was there a whistleblower?</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>Some reporting has used the term "whistleblower." PJ Matlock is not aware of any whistleblower who had direct contact with him, and he had no relationship with any such person.</p>
-        </div></div>
+        </div></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Atlas Trading Discord</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <button class="faq-q"><span>Atlas Trading Discord</span>
+          <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">
+        <div class="faq-a"><div class="faq-a-inner"><div>
           <p>Atlas Trading is PJ Matlock's community and one of the largest stock trading communities on Discord. Real traders, real discussion. Invite link: <a href="https://discord.gg/atlastrading" target="_blank" rel="noopener">discord.gg/atlastrading</a></p>
-        </div></div>
+        </div></div></div>
       </div>
     </section>
 
     <!-- Closing -->
-    <div class="closing fade-up">
+    <div class="closing reveal">
       <p>
         I maintain my innocence and I will continue to fight this case in court. The government's theory has fundamental legal problems that have never been tested. When the core issues of materiality, falsity, and intent are finally litigated, I believe the law and the facts will speak for themselves.
       </p>
     </div>
 
-  </div>
+  </main>
 
   <footer>
     <div class="wrap">
-      &copy; <span id="y"></span> PJ Matlock &nbsp;&middot;&nbsp;
-      <a href="/">Home</a> &nbsp;&middot;&nbsp;
-      <a href="https://discord.gg/atlastrading" target="_blank" rel="noopener">Discord</a> &nbsp;&middot;&nbsp;
-      <a href="https://x.com/pj_matlock" target="_blank" rel="me noopener">X</a>
+      <div class="foot-links">
+        <a href="/">Home</a>
+        <span class="sep">&middot;</span>
+        <a href="https://discord.gg/atlastrading" target="_blank" rel="noopener">Discord</a>
+        <span class="sep">&middot;</span>
+        <a href="https://x.com/pj_matlock" target="_blank" rel="me noopener">X</a>
+      </div>
+      <div>&copy; <span class="yr">2026</span> PJ Matlock</div>
     </div>
   </footer>
-
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>

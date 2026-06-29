@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="PJ Matlock">
+  <defs>
+    <linearGradient id="g" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4d8dff"/>
+      <stop offset="0.5" stop-color="#43c6ff"/>
+      <stop offset="1" stop-color="#2fe0a6"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="94" height="94" rx="24" fill="#0a0f1a"/>
+  <rect x="3.75" y="3.75" width="92.5" height="92.5" rx="23.25" fill="none" stroke="url(#g)" stroke-width="2.5" opacity="0.9"/>
+  <polyline points="22,68 40,52 56,61 78,30" fill="none" stroke="url(#g)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="78" cy="30" r="7" fill="#2fe0a6"/>
+  <circle cx="78" cy="30" r="11.5" fill="none" stroke="#2fe0a6" stroke-width="2" opacity="0.35"/>
+</svg>
