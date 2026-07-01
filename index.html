@@ -8,12 +8,14 @@
   <link rel="canonical" href="https://pjmatlock.com/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#05070d" />
+  <meta name="color-scheme" content="dark" />
 
   <!-- Icons -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="shortcut icon" href="/assets/favicon.ico" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="PJ Matlock - Official Site" />
@@ -28,13 +30,17 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@pj_matlock" />
   <meta name="twitter:creator" content="@pj_matlock" />
+  <meta name="twitter:title" content="PJ Matlock - Official Site" />
+  <meta name="twitter:description" content="Trader, entrepreneur, and founder of Atlas Trading. Official site with case updates and links." />
   <meta name="twitter:image" content="https://pjmatlock.com/assets/og.png" />
+  <meta name="twitter:image:alt" content="PJ Matlock - Trader, Entrepreneur, Atlas Trading Founder" />
 
   <!-- Person -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
+    "@id":"https://pjmatlock.com/#person",
     "name":"Perry \"PJ\" Matlock",
     "alternateName":["PJ Matlock","Perry Matlock"],
     "url":"https://pjmatlock.com/",
@@ -42,20 +48,31 @@
     "sameAs":[
       "https://x.com/pj_matlock",
       "https://www.instagram.com/pjmatlock/",
-      "https://discord.gg/atlastrading",
-      "https://pjmatlock.com/case-status/"
+      "https://discord.gg/atlastrading"
     ],
     "description":"Trader, entrepreneur, and founder of the Atlas Trading community."
   }
   </script>
 
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/site.css?v=20260629e" />
-  <script src="/assets/site.js?v=20260629e" defer></script>
+  <!-- WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "@id":"https://pjmatlock.com/#website",
+    "url":"https://pjmatlock.com/",
+    "name":"PJ Matlock",
+    "publisher":{"@id":"https://pjmatlock.com/#person"}
+  }
+  </script>
+
+  <link rel="preload" href="/assets/fonts/ClashDisplay-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/Satoshi-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/site.css?v=20260701b" />
+  <script src="/assets/site.js?v=20260701b" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="bg" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
@@ -87,11 +104,11 @@
 
   <!-- Homepage-only Halcyon offer strip -->
   <a class="promo-bar" href="/halcyon/" rel="sponsored noopener">
-    Funded futures with <span class="pb-brand">Halcyon</span><span class="pb-dot">&middot;</span>30% off with code <span class="pb-code">GO</span><span class="pb-arrow" aria-hidden="true">&rarr;</span>
+    Funded futures with <span class="pb-brand">Halcyon</span><span class="pb-dot" aria-hidden="true">&middot;</span>30% off with code <span class="pb-code">GO</span><span class="pb-arrow" aria-hidden="true">&rarr;</span>
   </a>
   </header>
 
-  <main class="wrap">
+  <main class="wrap" id="main">
 
     <!-- Hero -->
     <header class="hero">
@@ -125,11 +142,13 @@
         </div>
       </div>
 
-      <!-- Stat strip: case scoreboard, defense facts only -->
+      <!-- Stat strip: case scoreboard, defense facts only.
+           Deliberate emphasis system: years stay white (context),
+           the two defense-win zeros carry the brand gradient. -->
       <div class="stats">
-        <div class="stat reveal" data-delay="0"><div class="num grad-text">2024</div><div class="lbl">A federal judge dismissed the indictment before trial</div></div>
-        <div class="stat reveal" data-delay=".08"><div class="num">0</div><div class="lbl">Trials held. No evidence has been tested.</div></div>
-        <div class="stat reveal" data-delay=".16"><div class="num">0</div><div class="lbl">Convictions. The presumption of innocence stands.</div></div>
+        <div class="stat reveal" data-delay="0"><div class="num">2024</div><div class="lbl">A federal judge dismissed the indictment before trial</div></div>
+        <div class="stat reveal" data-delay=".08"><div class="num grad-text">0</div><div class="lbl">Trials held. No evidence has been tested.</div></div>
+        <div class="stat reveal" data-delay=".16"><div class="num grad-text">0</div><div class="lbl">Convictions. The presumption of innocence stands.</div></div>
         <div class="stat reveal" data-delay=".24"><div class="num">2025</div><div class="lbl">Fifth Circuit reversed only on narrow, procedural grounds</div></div>
       </div>
     </header>
@@ -160,12 +179,59 @@
       </div>
     </section>
 
+    <!-- My Story -->
+    <section class="section tight timeline" aria-label="My story">
+      <div class="reveal">
+        <div class="eyebrow">My Story</div>
+        <h2>The Short Version</h2>
+      </div>
+      <div class="tl-items" style="margin-top:32px">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+
+        <div class="tl-item green">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-date">Early Days</div>
+            <div class="tl-title">A Trader First</div>
+            <div class="tl-desc">I started day trading U.S. stocks with my own account more than a decade ago. My own money, my own risk, my own decisions. That has never changed.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-date">Atlas Trading</div>
+            <div class="tl-title">Building the Community</div>
+            <div class="tl-desc">I founded Atlas Trading and built it from the ground up into one of the largest retail trading communities on Discord: open discussion among independent traders, no hand-holding, no managed accounts.</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-date">Entrepreneurship</div>
+            <div class="tl-title">Trading Led to Building</div>
+            <div class="tl-desc">Products, businesses, and tools I wanted to exist. I think for myself, take risks, and back it up with action.</div>
+          </div>
+        </div>
+
+        <div class="tl-item amber">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-date">Today</div>
+            <div class="tl-title">Still Here</div>
+            <div class="tl-desc">I trade, I build, and I am fighting the government's case against me in court. The full record, in my own words, is on the <a href="/case-status/">Case Status</a> page.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <hr class="divider" />
 
     <!-- Case Overview -->
-    <section class="section">
+    <section class="section band">
       <div class="banner reveal">
-        <div class="tag"><span class="dot"></span> Case Update - April 2026</div>
+        <div class="tag"><span class="dot"></span> Case Update - July 2026</div>
         <h2>The Government's Case Has Fundamental Problems</h2>
         <p>
           In 2022, the DOJ brought charges. In 2024, a federal judge threw them out. The government appealed, and the Fifth Circuit sent the case back on narrow procedural grounds. No trial has occurred. No evidence has been tested. No jury has heard a single fact. The government still has to prove its entire case, and the core legal issues that led to dismissal in the first place have not gone away.
@@ -177,30 +243,30 @@
 
         <div class="key-points">
           <div class="kp">
-            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
             <div>
-              <h4>Already Dismissed Once</h4>
+              <h3>Already Dismissed Once</h3>
               <p>A federal judge reviewed the government's indictment, found it legally deficient, and dismissed it before trial in March 2024.</p>
             </div>
           </div>
           <div class="kp">
-            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg></div>
             <div>
-              <h4>No Trial, No Evidence Tested</h4>
+              <h3>No Trial, No Evidence Tested</h3>
               <p>The Fifth Circuit reversal was procedural. Zero witnesses have testified. Zero exhibits have been admitted. The presumption of innocence stands.</p>
             </div>
           </div>
           <div class="kp">
-            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
             <div>
-              <h4>Materiality Is the Real Battleground</h4>
+              <h3>Materiality Is the Real Battleground</h3>
               <p>The Fifth Circuit resolved one narrow element. It did not address whether any statement was actually false, material, or made with intent to defraud. Those are the questions that decide this case.</p>
             </div>
           </div>
           <div class="kp">
-            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <div>
-              <h4>This Affects Everyone</h4>
+              <h3>This Affects Everyone</h3>
               <p>If the government's theory holds, any retail trader who posts a bullish take and later sells could face a federal indictment. The line between fraud and free speech matters.</p>
             </div>
           </div>
@@ -208,12 +274,48 @@
       </div>
     </section>
 
+    <!-- Coverage -->
+    <section class="section tight" aria-label="Press coverage">
+      <div class="reveal">
+        <div class="eyebrow">Coverage</div>
+        <h2>What the Press Reported</h2>
+        <p class="section-desc">Third-party reporting on the March 2024 dismissal. Full sources and court documents are on the <a href="/case-status/">Case Status</a> page.</p>
+      </div>
+      <div class="sources three" style="margin-top:28px">
+        <a class="card source reveal" data-delay="0" href="https://variety.com/2024/digital/news/securities-fraud-charges-dropped-social-influencers-1235948958/" target="_blank" rel="noopener">
+          <div class="fav"><img src="/assets/favicons/variety.png" alt="" loading="lazy"></div>
+          <div>
+            <h3>&ldquo;Securities Fraud Charges Dropped Against Influencers&hellip;&rdquo;</h3>
+            <p class="meta">March 2024 dismissal coverage</p>
+            <div class="domain">variety.com</div>
+          </div>
+        </a>
+        <a class="card source reveal" data-delay=".08" href="https://www.fordobrien.com/wp-content/uploads/sites/1403994/2024/09/114M-Discord-Stock-Case-Tossed-Ahead-Of-Jury-Trial-Law360.pdf" target="_blank" rel="noopener">
+          <div class="fav"><img src="/assets/favicons/law360.png" alt="" loading="lazy"></div>
+          <div>
+            <h3>&ldquo;$114M Discord Stock Case Tossed Ahead Of Jury Trial&rdquo;</h3>
+            <p class="meta">March 2024 dismissal coverage</p>
+            <div class="domain">law360.com (PDF)</div>
+          </div>
+        </a>
+        <a class="card source reveal" data-delay=".16" href="https://www.dynamisllp.com/media/114m-discord-case-tossed" target="_blank" rel="noopener">
+          <div class="fav"><img src="/assets/favicons/dynamisllp.png" alt="" loading="lazy"></div>
+          <div>
+            <h3>&ldquo;Discord Stock Case Dismissal&rdquo;</h3>
+            <p class="meta">Legal analysis of the dismissal</p>
+            <div class="domain">dynamisllp.com</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- Statement -->
-    <section class="section" style="padding-top:0">
+    <section class="section tight" style="padding-top:0">
       <div class="quote reveal">
         <p>
           I maintain my innocence and I will fight this in court. The government's theory turns ordinary market speech into a federal crime. That should concern every person who participates in public markets, posts about stocks online, or believes that sharing an opinion is not a felony. The facts and the law are on my side, and when this case is fully litigated, I believe that will be clear.
         </p>
+        <div class="attrib">PJ Matlock <span style="color:var(--dim)">/ Founder, Atlas Trading</span></div>
       </div>
     </section>
 
@@ -221,12 +323,18 @@
 
     <!-- Funded futures trading (affiliate, code GO) -->
     <section class="section" aria-label="Funded futures trading">
-      <div class="reveal">
-        <div class="eyebrow">Partner</div>
-        <h2>Funded Futures Trading</h2>
-        <p class="section-desc">I partner with <strong>Halcyon Trader Funding</strong>, a U.S. futures prop firm (evaluations and funded accounts on CME, COMEX, NYMEX, and CBOT). Get <strong>30% off</strong> with code <strong>GO</strong>.</p>
-        <p style="margin-top:24px"><a class="btn btn-glass" href="/halcyon/">Halcyon: 30% off with code GO <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p>
-        <p style="margin-top:16px;font-size:.82rem;color:var(--muted);max-width:640px;">I'm an affiliate with Halcyon Trader Funding. Futures trading involves substantial risk. Trade at your own risk. Not financial advice.</p>
+      <div class="card partner-card reveal">
+        <div>
+          <div class="eyebrow">Partner</div>
+          <h2>Funded Futures Trading</h2>
+          <p class="section-desc">I partner with <strong>Halcyon Trader Funding</strong>, a U.S. futures prop firm (evaluations and funded accounts on CME, COMEX, NYMEX, and CBOT). Get <strong>30% off</strong> with code <strong>GO</strong>.</p>
+          <p style="margin-top:24px"><a class="btn btn-glass" href="/halcyon/">Halcyon: 30% off with code GO <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p>
+          <p style="margin-top:16px;font-size:.82rem;color:var(--muted);max-width:640px;">I'm an affiliate with Halcyon Trader Funding. Futures trading involves substantial risk. Trade at your own risk. Not financial advice.</p>
+        </div>
+        <div class="partner-chip" aria-hidden="true">
+          <div class="pct-sm">30% <span class="grad-text">OFF</span></div>
+          <div class="code-badge">GO</div>
+        </div>
       </div>
     </section>
 
@@ -234,20 +342,32 @@
 
   <!-- Footer -->
   <footer>
-    <div class="wrap">
-      <div class="foot-links">
-        <a href="/case-status/">Case Status</a>
-        <span class="sep">&middot;</span>
-        <a href="https://discord.gg/atlastrading" target="_blank" rel="noopener">Discord</a>
-        <span class="sep">&middot;</span>
-        <a href="https://x.com/pj_matlock" target="_blank" rel="me noopener">X</a>
-        <span class="sep">&middot;</span>
-        <a href="https://www.instagram.com/pjmatlock/" target="_blank" rel="me noopener">Instagram</a>
+    <div class="wrap foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <defs><linearGradient id="nmf" x1="0" y1="100" x2="100" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4d8dff"/><stop offset=".5" stop-color="#43c6ff"/><stop offset="1" stop-color="#2fe0a6"/></linearGradient></defs>
+            <rect x="3" y="3" width="94" height="94" rx="24" fill="#0a0f1a"/>
+            <rect x="3.75" y="3.75" width="92.5" height="92.5" rx="23.25" fill="none" stroke="url(#nmf)" stroke-width="2.5" opacity=".9"/>
+            <polyline points="22,68 40,52 56,61 78,30" fill="none" stroke="url(#nmf)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="78" cy="30" r="7" fill="#2fe0a6"/>
+          </svg>
+          PJ Matlock
+        </div>
+        <div class="foot-note">Official Site</div>
       </div>
-      <div>&copy; <span class="yr">2026</span> PJ Matlock</div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="/case-status/">Case Status</a>
+        <a href="https://discord.gg/atlastrading" target="_blank" rel="noopener">Discord</a>
+        <a href="https://x.com/pj_matlock" target="_blank" rel="me noopener">X</a>
+        <a href="https://www.instagram.com/pjmatlock/" target="_blank" rel="me noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="wrap foot-bottom">
       <div class="foot-disclaimer">
         Nothing on this site or my social channels is financial, investment, or trading advice. I share my personal opinions and trade only my own money. I am not an investment adviser or broker-dealer, and I do not manage anyone else's money.
       </div>
+      <div>&copy; <span class="yr">2026</span> PJ Matlock</div>
     </div>
   </footer>
 </body>
