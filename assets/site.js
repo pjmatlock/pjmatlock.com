@@ -18,12 +18,25 @@
     var toggle = document.querySelector(".nav-toggle");
     var links = document.querySelector(".nav-links");
     if (toggle && links) {
+      function closeMenu() {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
       toggle.addEventListener("click", function () {
         var open = links.classList.toggle("open");
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
       });
       links.querySelectorAll("a").forEach(function (a) {
-        a.addEventListener("click", function () { links.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); });
+        a.addEventListener("click", closeMenu);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && links.classList.contains("open")) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (links.classList.contains("open") && !links.contains(e.target) && !toggle.contains(e.target)) closeMenu();
       });
     }
 
@@ -44,37 +57,6 @@
         });
       }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
       revealEls.forEach(function (el) { io.observe(el); });
-    }
-
-    /* --- count-up stats --- */
-    function animateCount(el) {
-      var target = parseFloat(el.getAttribute("data-count"));
-      var suffix = el.getAttribute("data-suffix") || "";
-      var dur = 1500;
-      if (reduce) { el.textContent = formatNum(target) + suffix; return; }
-      var start = null;
-      function step(ts) {
-        if (start === null) start = ts;
-        var p = Math.min((ts - start) / dur, 1);
-        var eased = 1 - Math.pow(1 - p, 4); /* easeOutQuart */
-        el.textContent = formatNum(Math.round(target * eased)) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-        else el.textContent = formatNum(target) + suffix;
-      }
-      requestAnimationFrame(step);
-    }
-    function formatNum(n) { return n >= 1000 ? (n / 1000).toLocaleString() + "K" : String(n); }
-
-    var counters = document.querySelectorAll("[data-count]");
-    if (counters.length) {
-      if (reduce || !("IntersectionObserver" in window)) {
-        counters.forEach(animateCount);
-      } else {
-        var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); } });
-        }, { threshold: 0.6 });
-        counters.forEach(function (el) { cio.observe(el); });
-      }
     }
 
     /* --- scroll-drawn timeline --- */
@@ -110,18 +92,46 @@
     }
 
     /* --- FAQ accordion --- */
+    function setFaqOpen(item, open) {
+      item.classList.toggle("open", open);
+      var btn = item.querySelector(".faq-q");
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
     document.querySelectorAll(".faq-q").forEach(function (btn, i) {
       var item = btn.closest(".faq-item");
       var panel = item ? item.querySelector(".faq-a") : null;
       btn.setAttribute("aria-expanded", "false");
+      if (!btn.id) btn.id = "faq-q-" + i;
       if (panel) {
         if (!panel.id) panel.id = "faq-panel-" + i;
         panel.setAttribute("role", "region");
+        panel.setAttribute("aria-labelledby", btn.id);
         btn.setAttribute("aria-controls", panel.id);
       }
       btn.addEventListener("click", function () {
-        var open = item.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        setFaqOpen(item, !item.classList.contains("open"));
+      });
+    });
+
+    /* Deep links: #faq-... in the URL opens that item */
+    function openFaqFromHash() {
+      if (!location.hash) return;
+      var target;
+      try { target = document.querySelector(location.hash); } catch (e) { return; }
+      if (target && target.classList && target.classList.contains("faq-item")) setFaqOpen(target, true);
+    }
+    openFaqFromHash();
+    window.addEventListener("hashchange", openFaqFromHash);
+
+    /* Expand all / collapse all */
+    document.querySelectorAll(".faq-toggle-all").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var faq = btn.closest(".faq");
+        if (!faq) return;
+        var items = faq.querySelectorAll(".faq-item");
+        var anyClosed = Array.prototype.some.call(items, function (it) { return !it.classList.contains("open"); });
+        items.forEach(function (it) { setFaqOpen(it, anyClosed); });
+        btn.textContent = anyClosed ? "Collapse all" : "Expand all";
       });
     });
 
@@ -132,6 +142,38 @@
         if (fav) fav.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8b97ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';
       });
     });
+
+    /* --- long-read affordances (case-status only): progress bar + back-to-top --- */
+    if (document.querySelector(".wrap.read .timeline")) {
+      var bar = document.createElement("div");
+      bar.className = "read-progress";
+      bar.setAttribute("aria-hidden", "true");
+      document.body.appendChild(bar);
+
+      var top = document.createElement("button");
+      top.type = "button";
+      top.className = "to-top";
+      top.setAttribute("aria-label", "Back to top");
+      top.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>';
+      top.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      });
+      document.body.appendChild(top);
+
+      var rpTicking = false;
+      function rpUpdate() {
+        rpTicking = false;
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+        bar.style.width = (p * 100) + "%";
+        top.classList.toggle("show", window.scrollY > 1200);
+      }
+      window.addEventListener("scroll", function () {
+        if (!rpTicking) { rpTicking = true; requestAnimationFrame(rpUpdate); }
+      }, { passive: true });
+      rpUpdate();
+    }
 
     /* --- cursor spotlight on glass cards --- */
     if (!reduce && window.matchMedia("(hover: hover)").matches) {
