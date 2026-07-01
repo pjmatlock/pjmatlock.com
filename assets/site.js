@@ -143,6 +143,22 @@
       });
     });
 
+    /* --- tap-to-copy referral code (halcyon) --- */
+    var copyBtn = document.querySelector("button.code-badge[data-copy]");
+    if (copyBtn && navigator.clipboard && navigator.clipboard.writeText) {
+      var copyOrig = copyBtn.innerHTML;
+      copyBtn.addEventListener("click", function () {
+        navigator.clipboard.writeText(copyBtn.getAttribute("data-copy")).then(function () {
+          copyBtn.classList.add("copied");
+          copyBtn.textContent = "Copied ✓";
+          setTimeout(function () {
+            copyBtn.classList.remove("copied");
+            copyBtn.innerHTML = copyOrig;
+          }, 1600);
+        }).catch(function () {});
+      });
+    }
+
     /* --- long-read affordances (case-status only): progress bar + back-to-top --- */
     if (document.querySelector(".wrap.read .timeline")) {
       var bar = document.createElement("div");
