@@ -668,9 +668,11 @@ footer {
 @media print {
   :root { color-scheme: light; }
   body { background: #fff !important; color: #222 !important; font-size: 12px; }
-  h1, h2, h3, h4, strong, .stat .num, .tl-title, .faq-q, .quote p, .closing p, .status-callout p { color: #000 !important; }
-  p, li, .tl-desc, .lbl, .meta, .kp p, .problem p, .callout p, .callout li, .faq-a-inner > div, .section-desc, .foot-disclaimer { color: #222 !important; }
-  .tl-date, .eyebrow, .tag, .status-label, .case-id, .domain, .attrib { color: #444 !important; background: none !important; border-color: #bbb !important; }
+  h1, h2, h3, h4, strong, .stat .num, .tl-title, .faq-q, .quote p, .closing p, .status-callout p, .pct, .pct-sm, .code-badge { color: #000 !important; }
+  p, li, .tl-desc, .lbl, .meta, .kp p, .problem p, .callout p, .callout li, .faq-a-inner > div, .section-desc, .foot-disclaimer, .factbox dd, .update-text, em { color: #222 !important; }
+  .tl-date, .eyebrow, .tag, .status-label, .case-id, .domain, .attrib, .factbox dt, .update-date, .offer-label, .copy-hint, .disclosure { color: #444 !important; background: none !important; border-color: #bbb !important; }
+  .source { flex-wrap: wrap; }
+  .source::after { flex-basis: 100%; }
   .grad-text { background: none !important; -webkit-background-clip: initial !important; background-clip: initial !important; -webkit-text-fill-color: initial !important; color: #000 !important; }
   a { color: #003d99 !important; }
   .bg, .grain, .hero-chart, .promo-bar, .nav-toggle, .back-link, .social-row, .read-progress, .to-top, .faq-toggle-all, .faq-chevron, .toc, .skip-link { display: none !important; }
