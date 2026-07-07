@@ -1,0 +1,21 @@
+# Cloudflare Pages cache headers.
+# Long-lived caching is safe only for versioned/immutable assets:
+# site.css/site.js carry a ?v= token (bump it on every change) and the
+# font files get renamed if they ever change. OG images and site icons
+# keep default caching because their filenames never change.
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/favicons/*
+  Cache-Control: public, max-age=2592000
+
+# Keep the .pages.dev mirror out of search results (pjmatlock.com is canonical)
+https://pjmatlock.pages.dev/*
+  X-Robots-Tag: noindex
