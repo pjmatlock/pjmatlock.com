@@ -19,3 +19,9 @@
 # Keep the .pages.dev mirror out of search results (pjmatlock.com is canonical)
 https://pjmatlock.pages.dev/*
   X-Robots-Tag: noindex
+
+# Security headers for every page: HTTPS only, and no embedding in other sites' frames
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
